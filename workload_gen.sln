@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "workload_gen", "workload_gen\workload_gen.vcxproj", "{1CE1939B-E627-4E1D-8CBA-8B6A22EDD68B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CE1939B-E627-4E1D-8CBA-8B6A22EDD68B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1CE1939B-E627-4E1D-8CBA-8B6A22EDD68B}.Debug|Win32.Build.0 = Debug|Win32
+		{1CE1939B-E627-4E1D-8CBA-8B6A22EDD68B}.Release|Win32.ActiveCfg = Release|Win32
+		{1CE1939B-E627-4E1D-8CBA-8B6A22EDD68B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
