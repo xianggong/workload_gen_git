@@ -38,7 +38,7 @@ void set_status(cl_int* status, cl_int num) {
 	The error code is the index within this array
 */
 
-char *cl_errs[MAX_ERR_VAL] = {
+	char *cl_errs[MAX_ERR_VAL] = {
 	"CL_SUCCESS",                         // 0                            
 	"CL_DEVICE_NOT_FOUND",                //-1                         
 	"CL_DEVICE_NOT_AVAILABLE",            //-2                    
@@ -167,21 +167,21 @@ Construct a work unit.
 \param kernel_no, The index of the compiled kernel in the pre-compiled kernel list
 \param kernel_index, The index of the kernel in the program flow
 */
-void work_unit::init(work_pool                          *work_pool,
-	                 cl_context                         prefer_context=NULL,
-					 char*                              program_with_path=NULL,
-					 char*                              kernel_name=NULL,
-					 work_unit_dependency               dep=NULL,
-					 cl_uint                            work_dim=0,
-					 const size_t*                      global_work_offset=NULL,
-					 const size_t*                      global_work_size=NULL,
-                     const size_t*                      local_work_size=NULL,
-					 cl_uint                            flags=0,
-					 pre_compiled_kernels_per_context   kernel_list=NULL,
-					 cl_uint                            kernel_no=0,
-					 cl_uint                            kernel_index = 0,
-					 cl_int*                            status=NULL
-                     ) 
+void work_unit::init(work_pool *work_pool,
+	cl_context prefer_context=NULL,
+	char* program_with_path=NULL,
+	char* kernel_name=NULL,
+	work_unit_dependency dep=NULL,
+	cl_uint work_dim=0,
+	const size_t* global_work_offset=NULL,
+	const size_t* global_work_size=NULL,
+	const size_t* local_work_size=NULL,
+	cl_uint flags=0,
+	pre_compiled_kernels_per_context kernel_list=NULL,
+	cl_uint kernel_no=0,
+	cl_uint kernel_index = 0,
+	cl_int* status=NULL
+	)
 {
 
 	this->program_with_path = program_with_path;
@@ -240,9 +240,9 @@ cl_program work_unit::compile_program(_work_pool_context context, char * program
 	printf("Pre Compiling Function: Kernel file is: %s, device is: %s\n", program_path, context.device_name);
 
 #ifdef _WIN32
-    fopen_s(&fp, program_path, "rb");
+	fopen_s(&fp, program_path, "rb");
 #else
-    fp = fopen(program_path, "rb");
+	fp = fopen(program_path, "rb");
 #endif
 	if(!fp) {
 		printf("Could not open kernel file\n");
@@ -265,69 +265,69 @@ cl_program work_unit::compile_program(_work_pool_context context, char * program
 	source = (char *)malloc(size + 1);
 	// fill with NULLs
 	for (int i=0;i<size+1;i++) source[i]='\0';
-	if(source == NULL) {
-		printf("Error allocating space for the kernel source\n");
-		exit(-1);
-	}
+		if(source == NULL) {
+			printf("Error allocating space for the kernel source\n");
+			exit(-1);
+		}
 
 	//fread(source, size, 1, fp);   // TODO add error checking here
-	fread(source,1,size,fp);
-	source[size] = '\0';
+		fread(source,1,size,fp);
+		source[size] = '\0';
 	//printf("source:%s",source);
-	cl_program clProgramReturn = clCreateProgramWithSource(context.context, 1, 
-	(const char **)&source, NULL, &status);
-	if(cl_errChk(status, "creating program", true)) {
-		       exit(1);
-	}
+		cl_program clProgramReturn = clCreateProgramWithSource(context.context, 1, 
+			(const char **)&source, NULL, &status);
+		if(cl_errChk(status, "creating program", true)) {
+			exit(1);
+		}
 
-	free(source);
-	fclose(fp);
+		free(source);
+		fclose(fp);
 
-	status = clBuildProgram(clProgramReturn, 0, NULL,compileoptions, NULL, NULL);
-	if(cl_errChk(status, "building program", true) || verbosebuild == 1) 
-	{
+		status = clBuildProgram(clProgramReturn, 0, NULL,compileoptions, NULL, NULL);
+		if(cl_errChk(status, "building program", true) || verbosebuild == 1) 
+		{
 
-		cl_build_status build_status;
+			cl_build_status build_status;
 
-		clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_STATUS, 
-			sizeof(cl_build_status), &build_status, NULL);
+			clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_STATUS, 
+				sizeof(cl_build_status), &build_status, NULL);
 
-		if(build_status == CL_SUCCESS && verbosebuild == 0) {
-			return clProgramReturn;      
-		}	
+			if(build_status == CL_SUCCESS && verbosebuild == 0) {
+				return clProgramReturn;      
+			}	
 
 		//char *build_log;
-		size_t ret_val_size;
-		printf("Device: %p",context.device);
-		clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 0, 
-			NULL, &ret_val_size);
+			size_t ret_val_size;
+			printf("Device: %p",context.device);
+			clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 0, 
+				NULL, &ret_val_size);
 
-		char *build_log = (char *) malloc(ret_val_size+1);
-		if(build_log == NULL){ printf("Couldnt Allocate Build Log of Size %d \n",ret_val_size); exit(1);}
+			char *build_log = (char *) malloc(ret_val_size+1);
+			if(build_log == NULL){ printf("Couldnt Allocate Build Log of Size %d \n",ret_val_size); exit(1);}
 
-		clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 
-			ret_val_size+1, build_log, NULL);
+			clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 
+				ret_val_size+1, build_log, NULL);
 
-		printf("After build log call\n");
+			printf("After build log call\n");
 		// to be careful, terminate with \0
 		// there's no information in the reference whether the string is 0 
 		// terminated or not
-		build_log[ret_val_size] = '\0';
+			build_log[ret_val_size] = '\0';
 
-		printf("Build log:\n %s...\n", build_log);
-		getchar();
-		if(build_status != CL_SUCCESS) {
-			exit(1);
-		}	
-		else
-			return clProgramReturn;	  
-	}
+			printf("Build log:\n %s...\n", build_log);
+			getchar();
+			if(build_status != CL_SUCCESS) {
+				exit(1);
+			}	
+			else
+				return clProgramReturn;	  
+		}
 
 	// print the ptx information
 	//   cl_printBinaries(clProgram);
 	//    printf("Done Compiling the Program\n");
-	return clProgramReturn;
-}
+		return clProgramReturn;
+	}
 
 //! Work unit kernel creation function
 /*!
@@ -392,18 +392,18 @@ void cl_getTime(cl_time* time)
 {
 
 #ifdef _WIN32
-    int status = QueryPerformanceCounter((LARGE_INTEGER*)time);
-    if(status == 0) {
-        perror("QueryPerformanceCounter");
-        exit(-1);
-    }
+	int status = QueryPerformanceCounter((LARGE_INTEGER*)time);
+	if(status == 0) {
+		perror("QueryPerformanceCounter");
+		exit(-1);
+	}
 #else
     // Use gettimeofday to get the current time
-    struct timeval curTime;
-    gettimeofday(&curTime, NULL);
-    
+	struct timeval curTime;
+	gettimeofday(&curTime, NULL);
+
     // Convert timeval into double
-    *time = curTime.tv_sec * 1000 + (double)curTime.tv_usec/1000;
+	*time = curTime.tv_sec * 1000 + (double)curTime.tv_usec/1000;
 #endif
 }
 
@@ -411,20 +411,20 @@ void cl_getTime(cl_time* time)
 double cl_computeTime(cl_time start, cl_time end) 
 {
 #ifdef _WIN32
-    __int64 freq;
-    int status;
+	__int64 freq;
+	int status;
 
-    status = QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
-    if(status == 0) {
-        perror("QueryPerformanceFrequency");
-        exit(-1);
-    }
+	status = QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
+	if(status == 0) {
+		perror("QueryPerformanceFrequency");
+		exit(-1);
+	}
 
     // Return time in ms
-    return double(end-start)/(double(freq)/1000.0);
+	return double(end-start)/(double(freq)/1000.0);
 #else
-    
-    return end-start;
+
+	return end-start;
 #endif
 }
 
@@ -455,7 +455,7 @@ Reset the buffer used in one frame, and release the buffer
 */
 void work_pool::work_pool_scheduler(int device_id)
 {
-    cl_int status;
+	cl_int status;
 	cl_uint total_index;
 	while(1)
 	{		
@@ -469,11 +469,11 @@ void work_pool::work_pool_scheduler(int device_id)
 			{
 				printf("###### [Scheduler]: I'm taking unit no.%d, and give it to device: %d\n", total_index, device_id);
 				this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
+					NULL,
+					NULL,
+					NULL,
+					NULL,
+					&status);
 				//if(device_id == 3)
 				clFinish(this->context[device_id].command_queue);
 
@@ -484,13 +484,13 @@ void work_pool::work_pool_scheduler(int device_id)
 			{
 				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
 				this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
+					NULL,
+					NULL,
+					NULL,
+					NULL,
+					&status);
 				//if(this->num_on_this_device[device_id] == total_unfinished_work_units-1)
-					clFinish(this->context[device_id].command_queue);
+				clFinish(this->context[device_id].command_queue);
 
 				this->num_on_this_device[device_id]++;
 
@@ -503,11 +503,11 @@ void work_pool::work_pool_scheduler(int device_id)
 			{
 				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
 				this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
+					NULL,
+					NULL,
+					NULL,
+					NULL,
+					&status);
 
 				clFinish(this->context[device_id].command_queue);
 
@@ -520,11 +520,11 @@ void work_pool::work_pool_scheduler(int device_id)
 			{
 				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
 				this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
+					NULL,
+					NULL,
+					NULL,
+					NULL,
+					&status);
 				
 				clFinish(this->context[device_id].command_queue);
 
@@ -561,141 +561,141 @@ void work_pool::work_pool_scheduler(int device_id)
 				this->num_on_this_device[device_id]++;
 			}*/
 #elif defined(DYNAMIC)
-			if(device_id == 0)
-			{
-				int init_scheduled_num = (total_unfinished_work_units * 10)/16;
+				if(device_id == 0)
+				{
+					int init_scheduled_num = (total_unfinished_work_units * 10)/16;
 
-				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
-				this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
+					printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
+					this->extract_and_distribute(this->context[device_id], 												      
+						NULL,
+						NULL,
+						NULL,
+						NULL,
+						&status);
 
-				clFinish(this->context[device_id].command_queue);
+					clFinish(this->context[device_id].command_queue);
 
-				cl_getTime(&this->unit_end_time[total_index]);
-				this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]]=cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]);
+					cl_getTime(&this->unit_end_time[total_index]);
+					this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]]=cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]);
 				//printf("!!!!!! execution time of work unit %d: %f on device %d\n", total_index, cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]), device_id);
 
-				this->num_on_this_device[device_id]++;
+					this->num_on_this_device[device_id]++;
 
-				
+
 				//Dynamically moved work units across devices
-				if(this->num_on_this_device[device_id] >= 2)
-				{
-					if ((this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1]) && (this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-2]))
+					if(this->num_on_this_device[device_id] >= 2)
 					{
-						this->busy_direction[device_id] = UP;
-					}
-				}
-
-				if(this->busy_direction[device_id] == UP)
-				{
-					for(int i=0;i<this->total_num_devices;i++)
-					{
-						if(i != device_id && (this->busy_direction[i] != UP))
+						if ((this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1]) && (this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-2]))
 						{
-							this->dynamic_offset[device_id] --;
-							this->dynamic_offset[i] ++;
-							break;
+							this->busy_direction[device_id] = UP;
 						}
 					}
+
+					if(this->busy_direction[device_id] == UP)
+					{
+						for(int i=0;i<this->total_num_devices;i++)
+						{
+							if(i != device_id && (this->busy_direction[i] != UP))
+							{
+								this->dynamic_offset[device_id] --;
+								this->dynamic_offset[i] ++;
+								break;
+							}
+						}
+					}
+
+					if(this->num_on_this_device[device_id] == init_scheduled_num + this->dynamic_offset[device_id])
+						break;
 				}
+				else if (device_id == 1)
+				{
+					int init_scheduled_num = (total_unfinished_work_units * 5)/16;
 
-				if(this->num_on_this_device[device_id] == init_scheduled_num + this->dynamic_offset[device_id])
-					break;
-			}
-			else if (device_id == 1)
-			{
-				int init_scheduled_num = (total_unfinished_work_units * 5)/16;
+					printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
+					this->extract_and_distribute(this->context[device_id], 												      
+						NULL,
+						NULL,
+						NULL,
+						NULL,
+						&status);
 
-				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
-				this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
-				
-				clFinish(this->context[device_id].command_queue);
+					clFinish(this->context[device_id].command_queue);
 
-				cl_getTime(&this->unit_end_time[total_index]);
-				this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]]=cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]);
+					cl_getTime(&this->unit_end_time[total_index]);
+					this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]]=cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]);
 				//printf("!!!!!! execution time of work unit %d: %f on device %d\n", total_index, cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]), device_id);
 
-				this->num_on_this_device[device_id]++;
+					this->num_on_this_device[device_id]++;
 
 				//Dynamically moved work units across devices
-				if(this->num_on_this_device[device_id] >= 2)
-				{
-					if ((this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1]) && (this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-2]))
+					if(this->num_on_this_device[device_id] >= 2)
 					{
-						this->busy_direction[device_id] = UP;
-					}
-				}
-
-				if(this->busy_direction[device_id] == UP)
-				{
-					for(int i=0;i<this->total_num_devices;i++)
-					{
-						if(i != device_id && (this->busy_direction[i] != UP))
+						if ((this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1]) && (this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-2]))
 						{
-							this->dynamic_offset[device_id] --;
-							this->dynamic_offset[i] ++;
-							break;
+							this->busy_direction[device_id] = UP;
 						}
 					}
+
+					if(this->busy_direction[device_id] == UP)
+					{
+						for(int i=0;i<this->total_num_devices;i++)
+						{
+							if(i != device_id && (this->busy_direction[i] != UP))
+							{
+								this->dynamic_offset[device_id] --;
+								this->dynamic_offset[i] ++;
+								break;
+							}
+						}
+					}
+
+					if(this->num_on_this_device[device_id] == init_scheduled_num + this->dynamic_offset[device_id])
+						break;
 				}
+				else if (device_id == 2)
+				{
+					int init_scheduled_num = (total_unfinished_work_units * 1)/16;
 
-				if(this->num_on_this_device[device_id] == init_scheduled_num + this->dynamic_offset[device_id])
-					break;
-			}
-			else if (device_id == 2)
-			{
-				int init_scheduled_num = (total_unfinished_work_units * 1)/16;
-				
-				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
-				this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
-				clFinish(this->context[device_id].command_queue);
+					printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
+					this->extract_and_distribute(this->context[device_id], 												      
+						NULL,
+						NULL,
+						NULL,
+						NULL,
+						&status);
+					clFinish(this->context[device_id].command_queue);
 
-				cl_getTime(&this->unit_end_time[total_index]);
-				this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]]=cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]);
+					cl_getTime(&this->unit_end_time[total_index]);
+					this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]]=cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]);
 				//printf("!!!!!! execution time of work unit %d: %f on device %d\n", total_index, cl_computeTime(unit_start_time[total_index], unit_end_time[total_index]), device_id);
 
-				this->num_on_this_device[device_id]++;
+					this->num_on_this_device[device_id]++;
 
 				//Dynamically moved work units across devices
-				if(this->num_on_this_device[device_id] >= 2)
-				{
-					if ((this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1]) && (this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-2]))
+					if(this->num_on_this_device[device_id] >= 2)
 					{
-						this->busy_direction[device_id] = UP;
-					}
-				}
-
-				if(this->busy_direction[device_id] == UP)
-				{
-					for(int i=0;i<this->total_num_devices;i++)
-					{
-						if(i != device_id && (this->busy_direction[i] != UP))
+						if ((this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1]) && (this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-1] > this->execution_time_queue_per_device[device_id][this->num_on_this_device[device_id]-2]))
 						{
-							this->dynamic_offset[device_id] --;
-							this->dynamic_offset[i] ++;
-							break;
+							this->busy_direction[device_id] = UP;
 						}
 					}
-				}
 
-				if(this->num_on_this_device[device_id] == init_scheduled_num + this->dynamic_offset[device_id])
-					break;
-			}
+					if(this->busy_direction[device_id] == UP)
+					{
+						for(int i=0;i<this->total_num_devices;i++)
+						{
+							if(i != device_id && (this->busy_direction[i] != UP))
+							{
+								this->dynamic_offset[device_id] --;
+								this->dynamic_offset[i] ++;
+								break;
+							}
+						}
+					}
+
+					if(this->num_on_this_device[device_id] == init_scheduled_num + this->dynamic_offset[device_id])
+						break;
+				}
 			/*else if ((this->index_out == 21) && (device_id == 3))
 			{
 				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
@@ -708,21 +708,21 @@ void work_pool::work_pool_scheduler(int device_id)
 				this->num_on_this_device[device_id]++;
 			}*/
 #else
-			printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
-			this->extract_and_distribute(this->context[device_id], 												      
-												NULL,
-												NULL,
-												NULL,
-												NULL,
-												&status);
-			clFinish(this->context[device_id].command_queue);
+				printf("########### [Scheduler]: I'm taking unit %d, and give it to device: %d\n", this->index_out, device_id);
+				this->extract_and_distribute(this->context[device_id], 												      
+					NULL,
+					NULL,
+					NULL,
+					NULL,
+					&status);
+				clFinish(this->context[device_id].command_queue);
 
-			this->num_on_this_device[device_id]++;
+				this->num_on_this_device[device_id]++;
 #endif
+			}
+
 		}
-		
 	}
-}
 
 //! Work Pool Constructor
 /*!
@@ -827,11 +827,11 @@ void work_pool::init(int max_size, unsigned int init_number_work_units, cl_int* 
 	
 	for(int i=0;i<this->total_num_devices;i++)
 	{
-	
+
 		scheduler_thread_data *data_from_workpool = (scheduler_thread_data *)malloc(sizeof(scheduler_thread_data));
 		data_from_workpool->work_pool_in = this;
 		data_from_workpool->thread_id = i;
-	
+
 		//printf("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^no of work units: %d\n\n", data_from_workpool->work_pool_in->num_work_units);		
 
 		int rc_workpool;
@@ -1003,8 +1003,8 @@ work_pool_context work_pool::work_pool_get_contexts()
 					// Initialize required partition property
 					cl_device_partition_property_ext partitionPrty[] =
 					{ CL_DEVICE_PARTITION_BY_COUNTS_EXT,
-					  2, CL_PARTITION_BY_COUNTS_LIST_END_EXT,
-					  CL_PROPERTIES_LIST_END_EXT 
+						2, CL_PARTITION_BY_COUNTS_LIST_END_EXT,
+						CL_PROPERTIES_LIST_END_EXT 
 					};
 
 					// Initialize clCreateSubDevicesEXT function pointer
@@ -1029,7 +1029,7 @@ work_pool_context work_pool::work_pool_get_contexts()
 					status = pfn_clCreateSubDevicesEXT(context[device_idx].device, partitionPrty, numSubDevices,subDevices, NULL);
 					if(cl_errChk(status, "Creating sub devices using fission extensions", true))
 						exit(1);
-        
+
 					/* Create sub device using OpenCL Fission, updated by Enqiang 07/25/2011*/
 					/*
 					cl_context_properties cps[3] = {CL_CONTEXT_PLATFORM, (cl_context_properties)(context[device_idx].platform), 0};
@@ -1256,22 +1256,22 @@ void work_pool::enqueue(work_unit* work_unit_in, cl_uint priority, cl_int* statu
 	
 	//work_pool_state = WORK_POOL_NONEMPTY;
 #ifdef PRINT_PROFILING	    
-    printf("[In Enqueue] index_out: %d, index_in: %d\n", index_out, index_in);
-    printf("[In Enqueue] work units status: \n");
-    for(int i=0;i<max_size;i++)
+	printf("[In Enqueue] index_out: %d, index_in: %d\n", index_out, index_in);
+	printf("[In Enqueue] work units status: \n");
+	for(int i=0;i<max_size;i++)
 	{
-        if(this->work_pool_start[i] != (work_unit *)0xcdcdcdcd)
-        {
-            printf("%d ", this->work_pool_start[i]->work_unit_status);
-	    }
-        else
-        {
-            break;
-        }
-    }
-        printf(" \n\n");
+		if(this->work_pool_start[i] != (work_unit *)0xcdcdcdcd)
+		{
+			printf("%d ", this->work_pool_start[i]->work_unit_status);
+		}
+		else
+		{
+			break;
+		}
+	}
+	printf(" \n\n");
 #endif    
-    
+
 	//if(this->num_work_units == 1)
 	//pthread_cond_signal(&this->work_unit_q_not_empty_cv);
 
@@ -1301,11 +1301,11 @@ Dequeue work unit and distribute to device
 \param status, Operation status
 */
 void work_pool::extract_and_distribute(_work_pool_context context,  
-									   void (*pfn_init_callback)(work_pool *, _work_pool_context, work_unit *, void*),	
-						               void* init_args,							
-						               void (*pfn_finalize_callback)(work_pool *, _work_pool_context, void*),	
-						               void* finalize_args,
-									   cl_int* status)
+	void (*pfn_init_callback)(work_pool *, _work_pool_context, work_unit *, void*),	
+	void* init_args,							
+	void (*pfn_finalize_callback)(work_pool *, _work_pool_context, void*),	
+	void* finalize_args,
+	cl_int* status)
 {
 	pthread_mutex_lock (&this->work_unit_q_mutex);
 	//printf("[in Extract and Execute]: kernel index: %d\n", work_unit_ready->kernel_index);
@@ -1350,11 +1350,11 @@ void work_pool::extract_and_distribute(_work_pool_context context,
 
 			if(this->work_pool_start[this->index_out]->work_unit_status == CL_WORKUNIT_INITIALIZED)
 			{
-				               
+
 				if(this->work_pool_start[this->index_out]->dependency != NULL && this->work_pool_start[this->index_out]->dependency->num_events_in_wait_list != 0)
 				{
 					printf("---------------------------------------------------------------------------------ever enter here?\n");
-                    int dep_flag = 0;
+					int dep_flag = 0;
 					for(unsigned int parents=0;parents<this->work_pool_start[this->index_out]->dependency->num_events_in_wait_list;parents++)
 					{
 						//get the event status of each one
@@ -1395,7 +1395,7 @@ void work_pool::extract_and_distribute(_work_pool_context context,
 				for(unsigned int parents=0;parents<this->work_pool_start[this->index_out]->dependency->num_events_in_wait_list;parents++)
 				{
 					//TODO: If work unit is waiting for a dependent work unit to finish
-                    //get the event status of each one
+					//get the event status of each one
 					//if all are done, work_unit_status = CL_WORKUNIT_READY, break;
 					//otherwise assign the work_unit_status = CL_WORKUNIT_WAITING, index_out++						
 				}
@@ -1405,7 +1405,7 @@ void work_pool::extract_and_distribute(_work_pool_context context,
 				if(this->work_pool_start[this->index_out]->dependency != NULL && this->work_pool_start[this->index_out]->dependency->num_events_in_wait_list != 0)
 				{
 					printf("---------------------------------------------------------------------------------ever enter here?\n");
-                    int dep_flag = 0;
+					int dep_flag = 0;
 					for(unsigned int parents=0;parents<this->work_pool_start[this->index_out]->dependency->num_events_in_wait_list;parents++)
 					{
 						//get the event status of each one
@@ -1496,7 +1496,7 @@ void work_pool::extract_and_distribute(_work_pool_context context,
 			
 			//cl_kernel kernel = NULL;
 			work_unit_ready->kernel = work_unit_ready->kernel_all[context.work_pool_context_idx];
-					
+
 
 			if(pfn_init_callback != NULL)
 				pfn_init_callback(this, context, work_unit_ready, init_args);
@@ -1544,20 +1544,20 @@ void work_pool::extract_and_distribute(_work_pool_context context,
 
 			//printf("[Extract]: executing kernel\n");
 			*status = clEnqueueNDRangeKernel(context.command_queue, 
-											work_unit_ready->kernel, 
-											work_unit_ready->work_dim, 
-											work_unit_ready->global_work_offset, 
-											work_unit_ready->global_work_size,
-											work_unit_ready->local_work_size, 
-											0,
-											NULL,
-											NULL);
+				work_unit_ready->kernel, 
+				work_unit_ready->work_dim, 
+				work_unit_ready->global_work_offset, 
+				work_unit_ready->global_work_size,
+				work_unit_ready->local_work_size, 
+				0,
+				NULL,
+				NULL);
 			cl_errChk(*status, "Executing kernel", true);
 			//clFinish(context.command_queue);
 			//cl_uint work_unit_total_index = this->query();
 			//cl_getTime(&this->unit_start_time[work_unit_total_index]);
 
-            clFlush(context.command_queue);			
+			clFlush(context.command_queue);			
 
 			//cl_int event_status;
 			//clGetEventInfo(*work_unit_ready->dependency->event, CL_EVENT_COMMAND_EXECUTION_STATUS, sizeof(cl_int), &event_status, NULL);
@@ -1572,58 +1572,58 @@ void work_pool::extract_and_distribute(_work_pool_context context,
 				printf("------event_status: %d, CL_QUEUED\n", event_status);*/
 
 			//printf("[Extract]: done executing kernel\n");
-			if(pfn_finalize_callback != NULL)
-				pfn_finalize_callback(this, context, finalize_args);
+				if(pfn_finalize_callback != NULL)
+					pfn_finalize_callback(this, context, finalize_args);
 
 			//pthread_mutex_lock (&this->work_unit_q_mutex);
-			for(unsigned int arg_num=0; arg_num <work_unit_ready->arguments.size(); arg_num++)
-			{
-				
-				if(work_unit_ready->arguments.at(arg_num)->read_write_flag == READ_WRITE)
+				for(unsigned int arg_num=0; arg_num <work_unit_ready->arguments.size(); arg_num++)
 				{
-					cl_mem data_output = this->request_buffer(context, work_unit_ready->arguments.at(arg_num)->arg_pointer, work_unit_ready->arguments.at(arg_num)->size, NULL, CL_FALSE);
+
+					if(work_unit_ready->arguments.at(arg_num)->read_write_flag == READ_WRITE)
+					{
+						cl_mem data_output = this->request_buffer(context, work_unit_ready->arguments.at(arg_num)->arg_pointer, work_unit_ready->arguments.at(arg_num)->size, NULL, CL_FALSE);
 					//float *data_test = (float *)malloc(work_unit_ready->arguments.at(0).size);
-					*status = clEnqueueReadBuffer(context.command_queue, data_output, CL_FALSE, 0, work_unit_ready->arguments.at(arg_num)->size, work_unit_ready->arguments.at(arg_num)->arg_pointer, 0, NULL, NULL);
+						*status = clEnqueueReadBuffer(context.command_queue, data_output, CL_FALSE, 0, work_unit_ready->arguments.at(arg_num)->size, work_unit_ready->arguments.at(arg_num)->arg_pointer, 0, NULL, NULL);
 					//float *data = (float *)work_unit_ready->arguments.at(arg_num).arg_pointer;
 					//printf("within data read back: data_test[1]: %f\n", data_test[1]);
-					cl_errChk(*status, "Reading output from buffer", true);
-				}						
-			}
+						cl_errChk(*status, "Reading output from buffer", true);
+					}						
+				}
 
-			
-		}
+
+			}
 
 
 #ifdef VERBOSE
-		printf("########### [Extract]: Finish execution of the work unit\n");
+			printf("########### [Extract]: Finish execution of the work unit\n");
 #endif
 		//pthread_mutex_lock (&this->work_unit_q_mutex);
 
 #ifdef PRINT_PROFILING	    
-		printf("[in Dequeue] work units status: \n");
-        for(int i=0;i<WORKPOOL_CAP;i++)
-		{
-            if(this->work_pool_start[i] != (work_unit *)0xcdcdcdcd)
-            {
-                printf("%d ", this->work_pool_start[i]->work_unit_status);
-	        }
-            else
-            {
-                break;
-            }
-		}
-        printf(" \n\n");
+			printf("[in Dequeue] work units status: \n");
+			for(int i=0;i<WORKPOOL_CAP;i++)
+			{
+				if(this->work_pool_start[i] != (work_unit *)0xcdcdcdcd)
+				{
+					printf("%d ", this->work_pool_start[i]->work_unit_status);
+				}
+				else
+				{
+					break;
+				}
+			}
+			printf(" \n\n");
 #endif				
-		
-	}
-	
+
+		}
+
 #ifdef VERBOSE
-	printf("########### [Extract]: Exit extraction, and realease the lock\n");
-	printf("#########################################################################\n");
+		printf("########### [Extract]: Exit extraction, and realease the lock\n");
+		printf("#########################################################################\n");
 #endif
-	pthread_mutex_unlock (&this->work_unit_q_mutex);
-	
-}
+		pthread_mutex_unlock (&this->work_unit_q_mutex);
+
+	}
 
 //! Init buffer table
 /*!
@@ -1638,7 +1638,7 @@ void work_pool::init_buffer_table(_buffer_table buffer_table)
 	this->buffer_table.num_entries = 0;
     //this->buffer_table.entry_list = NULL;
 
-    return;
+	return;
 }
 
 //! Buffer management
@@ -1658,9 +1658,9 @@ cl_mem work_pool::request_buffer(_work_pool_context context_requested, void *dat
 	cl_int status;
 	buffer_entry entry;
 
-    cl_time begin_time, end_time;
-    cl_time begin_transfer_time, end_transfer_time;
-    cl_getTime(&begin_time);    
+	cl_time begin_time, end_time;
+	cl_time begin_transfer_time, end_transfer_time;
+	cl_getTime(&begin_time);    
 
 	for(unsigned int j=0;j<buffer_table.entry_list.size();j++)
 	{
@@ -1670,12 +1670,12 @@ cl_mem work_pool::request_buffer(_work_pool_context context_requested, void *dat
 			//data is already in the vector
 			
 			if(entry_lookup->valid_idx == context_requested.work_pool_context_idx)
-            {
+			{
 				cl_getTime(&end_time);
-                total_buffer_time = total_buffer_time + cl_computeTime(begin_time, end_time);
+				total_buffer_time = total_buffer_time + cl_computeTime(begin_time, end_time);
                 //printf("Buffer management(existing) time for this frame: %f\n", cl_computeTime(begin_time, end_time));
-                return entry_lookup->buffer[entry_lookup->valid_idx];
-            }
+				return entry_lookup->buffer[entry_lookup->valid_idx];
+			}
 			else   //Not tested yet
 			{
 				if(entry_lookup->coherent_flag[context_requested.work_pool_context_idx] == READ_ONLY)
@@ -1694,39 +1694,39 @@ cl_mem work_pool::request_buffer(_work_pool_context context_requested, void *dat
                 //copy buffer through CPU data pointer
 				char *data_for_copy = (char *)malloc(sizeof(char)*size);
 				status = clEnqueueReadBuffer(entry_lookup->pool_context[entry_lookup->valid_idx].command_queue, entry_lookup->buffer[entry_lookup->valid_idx], CL_TRUE, 0, 
-									         size, data_for_copy, 0, NULL, NULL); 
-		        if(status != CL_SUCCESS) {
-			        printf("error copying data to buffer\n");
-			        exit(-1);
-		        }
+					size, data_for_copy, 0, NULL, NULL); 
+				if(status != CL_SUCCESS) {
+					printf("error copying data to buffer\n");
+					exit(-1);
+				}
 				
 				entry_lookup->valid_idx = context_requested.work_pool_context_idx;
 
-                entry_lookup->pool_context[entry_lookup->valid_idx] = context_requested;
+				entry_lookup->pool_context[entry_lookup->valid_idx] = context_requested;
                 //if(entry_lookup->buffer[entry_lookup->valid_idx] == NULL)
                 //{
-                    entry_lookup->buffer[entry_lookup->valid_idx] = clCreateBuffer(context_requested.context, CL_MEM_READ_WRITE, size, NULL, &status);		
-                    if(status != CL_SUCCESS) {
-			            printf("error creating buffer\n");
-			            exit(-1);
-		            }
+				entry_lookup->buffer[entry_lookup->valid_idx] = clCreateBuffer(context_requested.context, CL_MEM_READ_WRITE, size, NULL, &status);		
+				if(status != CL_SUCCESS) {
+					printf("error creating buffer\n");
+					exit(-1);
+				}
                 //}
 
 				status = clEnqueueWriteBuffer(context_requested.command_queue, entry_lookup->buffer[entry_lookup->valid_idx], CL_TRUE, 0, 
-									          size, data_for_copy, 0, NULL, NULL); 
-		        if(status != CL_SUCCESS) {
-			        printf("error copying data to buffer\n");
-			        exit(-1);
-		        }
+					size, data_for_copy, 0, NULL, NULL); 
+				if(status != CL_SUCCESS) {
+					printf("error copying data to buffer\n");
+					exit(-1);
+				}
 
 				entry_lookup->coherent_flag[entry_lookup->valid_idx] = read_only_flag;
 
-                free(data_for_copy);
-                cl_getTime(&begin_transfer_time);
-                cl_getTime(&end_time);
-                cl_getTime(&end_transfer_time);
-                total_buffer_time = total_buffer_time + cl_computeTime(begin_time, end_time);
-                total_transfer_time = total_transfer_time + cl_computeTime(begin_transfer_time, end_transfer_time);
+				free(data_for_copy);
+				cl_getTime(&begin_transfer_time);
+				cl_getTime(&end_time);
+				cl_getTime(&end_transfer_time);
+				total_buffer_time = total_buffer_time + cl_computeTime(begin_time, end_time);
+				total_transfer_time = total_transfer_time + cl_computeTime(begin_transfer_time, end_transfer_time);
                 //printf("Buffer transfer time for this frame: %f\n", cl_computeTime(begin_transfer_time, end_transfer_time));
                 //printf("Buffer management(transfer) time for this frame: %f\n", cl_computeTime(begin_time, end_time));
 				return entry_lookup->buffer[entry_lookup->valid_idx];					
@@ -1744,18 +1744,18 @@ cl_mem work_pool::request_buffer(_work_pool_context context_requested, void *dat
 
 	entry->valid_idx = context_requested.work_pool_context_idx;
 	entry->pool_context[entry->valid_idx] = context_requested;
-		
+
 	if (read_only_flag == READ_ONLY)
 	{
 		entry->buffer[entry->valid_idx] = clCreateBuffer(context_requested.context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR,
-					                                     size, data, &status);
+			size, data, &status);
 		cl_errChk(status, "Error creating read_only mem buffer", true);
 		entry->coherent_flag[entry->valid_idx] = READ_ONLY;
 	}
 	else if (read_only_flag == WRITE_ONLY)
 	{
 		entry->buffer[entry->valid_idx] = clCreateBuffer(context_requested.context, CL_MEM_WRITE_ONLY | CL_MEM_COPY_HOST_PTR,
-					                                     size, data, &status);
+			size, data, &status);
 		cl_errChk(status, "Error creating write_only mem buffer", true);
 		entry->coherent_flag[entry->valid_idx] = WRITE_ONLY;
 	}
@@ -1766,7 +1766,7 @@ cl_mem work_pool::request_buffer(_work_pool_context context_requested, void *dat
 		if(status != CL_SUCCESS) {
 			printf("error creating read_write buffer\n");
 			exit(-1);
-		
+
 		}
 		entry->coherent_flag[entry->valid_idx] = READ_WRITE;
 	}
@@ -1788,14 +1788,14 @@ cl_mem work_pool::request_buffer(_work_pool_context context_requested, void *dat
 
 	//cl_copyToDevice_workpool(context.command_queue, buffer_entry->buffer[i], buffer_entry->data, size);
 
-	this->buffer_table.entry_list.push_back(entry);
-	buffer_table.num_entries++;
-    cl_getTime(&end_time);
-    total_buffer_time = total_buffer_time + cl_computeTime(begin_time, end_time);
+		this->buffer_table.entry_list.push_back(entry);
+		buffer_table.num_entries++;
+		cl_getTime(&end_time);
+		total_buffer_time = total_buffer_time + cl_computeTime(begin_time, end_time);
     //printf("Buffer management(new) time for this frame: %f\n", cl_computeTime(begin_time, end_time));
-	return entry->buffer[entry->valid_idx];
+		return entry->buffer[entry->valid_idx];
 
-}
+	}
 
 //! Query the information of the next work unit
 /*!
@@ -1823,23 +1823,23 @@ Reset the buffer used in one frame, and release the buffer
 void work_pool::reset_buffer(int thread_id)
 {
 	
-    cl_int status;
+	cl_int status;
 
-    for(unsigned int j=0;j<this->buffer_table.entry_list.size();j++)
+	for(unsigned int j=0;j<this->buffer_table.entry_list.size();j++)
 	{
-        //printf("thread_id: %d, buffer entry no. %d\n", thread_id, j);
-        buffer_entry entry = this->buffer_table.entry_list.at(j);
-        for(int i=0;i<this->buffer_table.num_devices;i++)
-        {
-            if(entry->buffer[i] != (cl_mem)0xcdcdcdcd)
-            {
-                status = clReleaseMemObject(entry->buffer[i]);
-                cl_errChk(status, "Releasing mem object", true);
-            }
-        }
-    }
+	//printf("thread_id: %d, buffer entry no. %d\n", thread_id, j);
+		buffer_entry entry = this->buffer_table.entry_list.at(j);
+		for(int i=0;i<this->buffer_table.num_devices;i++)
+		{
+			if(entry->buffer[i] != (cl_mem)0xcdcdcdcd)
+			{
+				status = clReleaseMemObject(entry->buffer[i]);
+				cl_errChk(status, "Releasing mem object", true);
+			}
+		}
+	}
 
-    this->buffer_table.num_entries  = 0;
+	this->buffer_table.num_entries  = 0;
 	this->buffer_table.entry_list.clear();
 
 	//num_work_units = 0;
@@ -1882,23 +1882,23 @@ void work_pool::finish()
 	{
 		pthread_join(this->work_pool_scheduler_thread[i], NULL);
 	}*/
-	
-	
+
+
 
 	//pthread_exit(NULL);
 
-	for(int i=0;i<this->total_num_devices;i++)
-	{
-		printf("!!!!!! on %d device, %d work units were executed\n", i, num_on_this_device[i]);
-	}
+		for(int i=0;i<this->total_num_devices;i++)
+		{
+			printf("!!!!!! on %d device, %d work units were executed\n", i, num_on_this_device[i]);
+		}
 
 #ifdef VERBOSE
-	for(int i=0;i<this->total_num_devices;i++)
-	{
-		for(int j=0;j<this->num_on_this_device[i];j++)
+		for(int i=0;i<this->total_num_devices;i++)
 		{
-			printf("!!!!!! on %d device, execution time of %d work units is %f\n", i, j, this->execution_time_queue_per_device[i][j]);
+			for(int j=0;j<this->num_on_this_device[i];j++)
+			{
+				printf("!!!!!! on %d device, execution time of %d work units is %f\n", i, j, this->execution_time_queue_per_device[i][j]);
+			}
 		}
-	}
 #endif	
-}
+	}

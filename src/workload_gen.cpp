@@ -11,20 +11,20 @@
 
 int main( int argc, char* argv[] )
 {
-    // Length of vectors
+	// Length of vectors
 	unsigned int n = 1024*16; //max vector size is 1M
 	//unsigned int n = 1024; //max vector size is 1M
 
- 
-    // Host input vectors
-    float **h_a;
-    float **h_b;
-    // Host output vector
-    float **h_c;
+
+	// Host input vectors
+	float **h_a;
+	float **h_b;
+	// Host output vector
+	float **h_c;
 	// Output vector for verification
 	float **h_c_v;
- 
-    // Size, in bytes, of each vector
+
+	// Size, in bytes, of each vector
 	unsigned int bytes[VEC_NUMBER];
 
 	unsigned int random = 4;
@@ -36,8 +36,8 @@ int main( int argc, char* argv[] )
 	h_c_v = (float **)malloc(sizeof(float *)*VEC_NUMBER);
 
 	//bytes = (int *)malloc(sizeof(int)*vec_number);
- 
-    unsigned int i, j;
+
+	unsigned int i, j;
 	for( i=0;i<VEC_NUMBER;i++)
 	{
 		bytes[i] = n/random;
@@ -77,27 +77,27 @@ int main( int argc, char* argv[] )
 	for(int i=0;i<VEC_NUMBER;i++)
 	{		
 		size_t globalSize, localSize;
- 
+
 		// Number of work items in each local work group
 		localSize = 64;
- 
+
 		// Number of total work items - localSize must be devisor
 		globalSize = (size_t)ceil(n/(float)localSize)*localSize;
 
 		work_unit_vec[i].init(&work_pool_vec, 
-								NULL, 
-								"../src/vectoradd.cl",
-								"vecAdd", 
-								NULL, 
-								1,
-								NULL, 
-								&globalSize,
-								&localSize,
-								0, 
-								NULL, 
-								0, 
-								0, 
-								&status);
+			NULL, 
+			"../src/vectoradd.cl",
+			"vecAdd", 
+			NULL, 
+			1,
+			NULL, 
+			&globalSize,
+			&localSize,
+			0, 
+			NULL, 
+			0, 
+			0, 
+			&status);
 		if(cl_errChk(status, "Initialize a work unit", true)) 					
 			exit(1);
 		
@@ -129,13 +129,13 @@ int main( int argc, char* argv[] )
 
 	cl_getTime(&totalEnd);
 
-    printf("execution time: %f\n", cl_computeTime(totalStart, totalEnd));
- 
-   
-    //check the result with cpu execution
-    
+	printf("execution time: %f\n", cl_computeTime(totalStart, totalEnd));
+
+
+	//check the result with cpu execution
+
 	/*int result = 0;
-    for(i=0; i<VEC_NUMBER; i++)
+	for(i=0; i<VEC_NUMBER; i++)
 	{
 		for(j=0; j<bytes[i]; j++)
 		{
@@ -156,13 +156,13 @@ int main( int argc, char* argv[] )
 	{
 		printf("$$$$$$ incorrect !!! $$$$$\n");
 	}*/
- 
-    //release host memory
-    free(h_a);
-    free(h_b);
-    free(h_c);
+
+	//release host memory
+		free(h_a);
+		free(h_b);
+		free(h_c);
 
 	//pthread_exit(NULL);
- 
-    return 0;
-}
+
+		return 0;
+	}
