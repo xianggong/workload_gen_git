@@ -86,7 +86,7 @@ int main( int argc, char* argv[] )
 
 		work_unit_vec[i].init(&work_pool_vec, 
 			NULL, 
-			"../src/vectoradd.cl",
+			"vectoradd.cl",
 			"vecAdd", 
 			NULL, 
 			1,
