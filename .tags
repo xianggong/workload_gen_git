@@ -6,212 +6,415 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ACLOCAL	Makefile	/^ACLOCAL = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run aclocal-1.11$/;"	m
 ACLOCAL	lib/Makefile	/^ACLOCAL = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run aclocal-1.11$/;"	m
+ACLOCAL	src/Makefile	/^ACLOCAL = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run aclocal-1.11$/;"	m
+ACLOCAL	src/vecadd/Makefile	/^ACLOCAL = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run aclocal-1.11$/;"	m
 ACLOCAL_AMFLAGS	Makefile	/^ACLOCAL_AMFLAGS = -I m4$/;"	m
 ACLOCAL_M4	Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
 ACLOCAL_M4	lib/Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
+ACLOCAL_M4	src/Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
+ACLOCAL_M4	src/vecadd/Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
 AMTAR	Makefile	/^AMTAR = $${TAR-tar}$/;"	m
 AMTAR	lib/Makefile	/^AMTAR = $${TAR-tar}$/;"	m
+AMTAR	src/Makefile	/^AMTAR = $${TAR-tar}$/;"	m
+AMTAR	src/vecadd/Makefile	/^AMTAR = $${TAR-tar}$/;"	m
 AM_CFLAGS	lib/Makefile	/^AM_CFLAGS = -m32$/;"	m
+AM_CPPFLAGS	src/vecadd/Makefile	/^AM_CPPFLAGS =  -I$(top_srcdir)\/lib $/;"	m
+AM_DEFAULT_VERBOSITY	Makefile	/^AM_DEFAULT_VERBOSITY = 0$/;"	m
+AM_DEFAULT_VERBOSITY	lib/Makefile	/^AM_DEFAULT_VERBOSITY = 0$/;"	m
+AM_DEFAULT_VERBOSITY	src/Makefile	/^AM_DEFAULT_VERBOSITY = 0$/;"	m
+AM_DEFAULT_VERBOSITY	src/vecadd/Makefile	/^AM_DEFAULT_VERBOSITY = 0$/;"	m
 AM_RECURSIVE_TARGETS	Makefile	/^AM_RECURSIVE_TARGETS = $(RECURSIVE_TARGETS:-recursive=) \\$/;"	m
+AM_RECURSIVE_TARGETS	src/Makefile	/^AM_RECURSIVE_TARGETS = $(RECURSIVE_TARGETS:-recursive=) \\$/;"	m
+AM_V_CC	lib/Makefile	/^AM_V_CC = $(am__v_CC_$(V))$/;"	m
+AM_V_CC	src/vecadd/Makefile	/^AM_V_CC = $(am__v_CC_$(V))$/;"	m
+AM_V_CCLD	lib/Makefile	/^AM_V_CCLD = $(am__v_CCLD_$(V))$/;"	m
+AM_V_CCLD	src/vecadd/Makefile	/^AM_V_CCLD = $(am__v_CCLD_$(V))$/;"	m
+AM_V_CXX	lib/Makefile	/^AM_V_CXX = $(am__v_CXX_$(V))$/;"	m
+AM_V_CXX	src/vecadd/Makefile	/^AM_V_CXX = $(am__v_CXX_$(V))$/;"	m
+AM_V_CXXLD	lib/Makefile	/^AM_V_CXXLD = $(am__v_CXXLD_$(V))$/;"	m
+AM_V_CXXLD	src/vecadd/Makefile	/^AM_V_CXXLD = $(am__v_CXXLD_$(V))$/;"	m
+AM_V_GEN	Makefile	/^AM_V_GEN = $(am__v_GEN_$(V))$/;"	m
+AM_V_GEN	lib/Makefile	/^AM_V_GEN = $(am__v_GEN_$(V))$/;"	m
+AM_V_GEN	src/Makefile	/^AM_V_GEN = $(am__v_GEN_$(V))$/;"	m
+AM_V_GEN	src/vecadd/Makefile	/^AM_V_GEN = $(am__v_GEN_$(V))$/;"	m
+AM_V_at	Makefile	/^AM_V_at = $(am__v_at_$(V))$/;"	m
+AM_V_at	lib/Makefile	/^AM_V_at = $(am__v_at_$(V))$/;"	m
+AM_V_at	src/Makefile	/^AM_V_at = $(am__v_at_$(V))$/;"	m
+AM_V_at	src/vecadd/Makefile	/^AM_V_at = $(am__v_at_$(V))$/;"	m
+AM_V_lt	lib/Makefile	/^AM_V_lt = $(am__v_lt_$(V))$/;"	m
+AM_V_lt	src/vecadd/Makefile	/^AM_V_lt = $(am__v_lt_$(V))$/;"	m
 AR	Makefile	/^AR = ar$/;"	m
 AR	lib/Makefile	/^AR = ar$/;"	m
+AR	src/Makefile	/^AR = ar$/;"	m
+AR	src/vecadd/Makefile	/^AR = ar$/;"	m
 AUTOCONF	Makefile	/^AUTOCONF = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoconf$/;"	m
 AUTOCONF	lib/Makefile	/^AUTOCONF = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoconf$/;"	m
+AUTOCONF	src/Makefile	/^AUTOCONF = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoconf$/;"	m
+AUTOCONF	src/vecadd/Makefile	/^AUTOCONF = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoconf$/;"	m
 AUTOHEADER	Makefile	/^AUTOHEADER = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoheader$/;"	m
 AUTOHEADER	lib/Makefile	/^AUTOHEADER = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoheader$/;"	m
+AUTOHEADER	src/Makefile	/^AUTOHEADER = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoheader$/;"	m
+AUTOHEADER	src/vecadd/Makefile	/^AUTOHEADER = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run autoheader$/;"	m
 AUTOMAKE	Makefile	/^AUTOMAKE = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run automake-1.11$/;"	m
 AUTOMAKE	lib/Makefile	/^AUTOMAKE = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run automake-1.11$/;"	m
+AUTOMAKE	src/Makefile	/^AUTOMAKE = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run automake-1.11$/;"	m
+AUTOMAKE	src/vecadd/Makefile	/^AUTOMAKE = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run automake-1.11$/;"	m
 AWK	Makefile	/^AWK = mawk$/;"	m
 AWK	lib/Makefile	/^AWK = mawk$/;"	m
+AWK	src/Makefile	/^AWK = mawk$/;"	m
+AWK	src/vecadd/Makefile	/^AWK = mawk$/;"	m
 CC	Makefile	/^CC = gcc$/;"	m
 CC	lib/Makefile	/^CC = gcc$/;"	m
+CC	src/Makefile	/^CC = gcc$/;"	m
+CC	src/vecadd/Makefile	/^CC = gcc$/;"	m
 CCDEPMODE	Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
 CCDEPMODE	lib/Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
+CCDEPMODE	src/Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
+CCDEPMODE	src/vecadd/Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
 CCLD	lib/Makefile	/^CCLD = $(CC)$/;"	m
+CCLD	src/vecadd/Makefile	/^CCLD = $(CC)$/;"	m
 CFLAGS	Makefile	/^CFLAGS = -g -O2$/;"	m
 CFLAGS	lib/Makefile	/^CFLAGS = -g -O2$/;"	m
+CFLAGS	src/Makefile	/^CFLAGS = -g -O2$/;"	m
+CFLAGS	src/vecadd/Makefile	/^CFLAGS = -g -O2$/;"	m
+CLWORKPOOL	src/vecadd/Makefile	/^CLWORKPOOL = \\$/;"	m
 CL_TRUE_INIT_CONST	lib/clExtensions.h	115;"	d
+CL_WORKPOOL_INCLUDES	Makefile	/^CL_WORKPOOL_INCLUDES =  -I$(top_srcdir)\/lib $/;"	m
+CL_WORKPOOL_INCLUDES	lib/Makefile	/^CL_WORKPOOL_INCLUDES =  -I$(top_srcdir)\/lib $/;"	m
+CL_WORKPOOL_INCLUDES	src/Makefile	/^CL_WORKPOOL_INCLUDES =  -I$(top_srcdir)\/lib $/;"	m
+CL_WORKPOOL_INCLUDES	src/vecadd/Makefile	/^CL_WORKPOOL_INCLUDES =  -I$(top_srcdir)\/lib $/;"	m
 CL_WORKUNIT_COMPLETE	lib/clExtensions.h	96;"	d
 CL_WORKUNIT_INITIALIZED	lib/clExtensions.h	93;"	d
 CL_WORKUNIT_INVALID	lib/clExtensions.h	97;"	d
 CL_WORKUNIT_READY	lib/clExtensions.h	95;"	d
 CL_WORKUNIT_WAITING	lib/clExtensions.h	94;"	d
 COMPILE	lib/Makefile	/^COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \\$/;"	m
+COMPILE	src/vecadd/Makefile	/^COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \\$/;"	m
 CONFIG_CLEAN_FILES	Makefile	/^CONFIG_CLEAN_FILES =$/;"	m
 CONFIG_CLEAN_FILES	lib/Makefile	/^CONFIG_CLEAN_FILES =$/;"	m
+CONFIG_CLEAN_FILES	src/Makefile	/^CONFIG_CLEAN_FILES =$/;"	m
+CONFIG_CLEAN_FILES	src/vecadd/Makefile	/^CONFIG_CLEAN_FILES =$/;"	m
 CONFIG_CLEAN_VPATH_FILES	Makefile	/^CONFIG_CLEAN_VPATH_FILES =$/;"	m
 CONFIG_CLEAN_VPATH_FILES	lib/Makefile	/^CONFIG_CLEAN_VPATH_FILES =$/;"	m
+CONFIG_CLEAN_VPATH_FILES	src/Makefile	/^CONFIG_CLEAN_VPATH_FILES =$/;"	m
+CONFIG_CLEAN_VPATH_FILES	src/vecadd/Makefile	/^CONFIG_CLEAN_VPATH_FILES =$/;"	m
 CPP	Makefile	/^CPP = gcc -E$/;"	m
 CPP	lib/Makefile	/^CPP = gcc -E$/;"	m
+CPP	src/Makefile	/^CPP = gcc -E$/;"	m
+CPP	src/vecadd/Makefile	/^CPP = gcc -E$/;"	m
 CPPFLAGS	Makefile	/^CPPFLAGS = $/;"	m
 CPPFLAGS	lib/Makefile	/^CPPFLAGS = $/;"	m
+CPPFLAGS	src/Makefile	/^CPPFLAGS = $/;"	m
+CPPFLAGS	src/vecadd/Makefile	/^CPPFLAGS = $/;"	m
 CTAGS	Makefile	/^CTAGS = ctags$/;"	m
 CTAGS	lib/Makefile	/^CTAGS = ctags$/;"	m
+CTAGS	src/Makefile	/^CTAGS = ctags$/;"	m
+CTAGS	src/vecadd/Makefile	/^CTAGS = ctags$/;"	m
 CXX	Makefile	/^CXX = g++$/;"	m
 CXX	lib/Makefile	/^CXX = g++$/;"	m
+CXX	src/Makefile	/^CXX = g++$/;"	m
+CXX	src/vecadd/Makefile	/^CXX = g++$/;"	m
 CXXCOMPILE	lib/Makefile	/^CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \\$/;"	m
+CXXCOMPILE	src/vecadd/Makefile	/^CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \\$/;"	m
 CXXCPP	Makefile	/^CXXCPP = g++ -E$/;"	m
 CXXCPP	lib/Makefile	/^CXXCPP = g++ -E$/;"	m
+CXXCPP	src/Makefile	/^CXXCPP = g++ -E$/;"	m
+CXXCPP	src/vecadd/Makefile	/^CXXCPP = g++ -E$/;"	m
 CXXDEPMODE	Makefile	/^CXXDEPMODE = depmode=gcc3$/;"	m
 CXXDEPMODE	lib/Makefile	/^CXXDEPMODE = depmode=gcc3$/;"	m
+CXXDEPMODE	src/Makefile	/^CXXDEPMODE = depmode=gcc3$/;"	m
+CXXDEPMODE	src/vecadd/Makefile	/^CXXDEPMODE = depmode=gcc3$/;"	m
 CXXFLAGS	Makefile	/^CXXFLAGS = -g -O2$/;"	m
 CXXFLAGS	lib/Makefile	/^CXXFLAGS = -g -O2$/;"	m
+CXXFLAGS	src/Makefile	/^CXXFLAGS = -g -O2$/;"	m
+CXXFLAGS	src/vecadd/Makefile	/^CXXFLAGS = -g -O2$/;"	m
 CXXLD	lib/Makefile	/^CXXLD = $(CXX)$/;"	m
-CXXLINK	lib/Makefile	/^CXXLINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \\$/;"	m
+CXXLD	src/vecadd/Makefile	/^CXXLD = $(CXX)$/;"	m
+CXXLINK	lib/Makefile	/^CXXLINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \\$/;"	m
+CXXLINK	src/vecadd/Makefile	/^CXXLINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \\$/;"	m
 CYGPATH_W	Makefile	/^CYGPATH_W = echo$/;"	m
 CYGPATH_W	lib/Makefile	/^CYGPATH_W = echo$/;"	m
+CYGPATH_W	src/Makefile	/^CYGPATH_W = echo$/;"	m
+CYGPATH_W	src/vecadd/Makefile	/^CYGPATH_W = echo$/;"	m
 CreateProcess	libtool	/^   CreateProcess().  We must quote the arguments since Win32 CreateProcess()$/;"	f
 CreateProcess	ltmain.sh	/^   CreateProcess().  We must quote the arguments since Win32 CreateProcess()$/;"	f
 DEFAULT_INCLUDES	lib/Makefile	/^DEFAULT_INCLUDES = -I.$/;"	m
-DEFS	Makefile	/^DEFS = -DPACKAGE_NAME=\\"clWorkpool\\" -DPACKAGE_TARNAME=\\"clworkpool\\" -DPACKAGE_VERSION=\\"0.1\\" -DPACKAGE_STRING=\\"clWorkpool\\ 0.1\\" -DPACKAGE_BUGREPORT=\\"\\" -DPACKAGE_URL=\\"\\" -DPACKAGE=\\"clworkpool\\" -DVERSION=\\"0.1\\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\\".libs\/\\" -DHAVE_OPENCL=1$/;"	m
-DEFS	lib/Makefile	/^DEFS = -DPACKAGE_NAME=\\"clWorkpool\\" -DPACKAGE_TARNAME=\\"clworkpool\\" -DPACKAGE_VERSION=\\"0.1\\" -DPACKAGE_STRING=\\"clWorkpool\\ 0.1\\" -DPACKAGE_BUGREPORT=\\"\\" -DPACKAGE_URL=\\"\\" -DPACKAGE=\\"clworkpool\\" -DVERSION=\\"0.1\\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\\".libs\/\\" -DHAVE_OPENCL=1$/;"	m
+DEFAULT_INCLUDES	src/vecadd/Makefile	/^DEFAULT_INCLUDES = -I.$/;"	m
+DEFS	Makefile	/^DEFS = -DPACKAGE_NAME=\\"clWorkpool\\" -DPACKAGE_TARNAME=\\"clworkpool\\" -DPACKAGE_VERSION=\\"0.1\\" -DPACKAGE_STRING=\\"clWorkpool\\ 0.1\\" -DPACKAGE_BUGREPORT=\\"\\" -DPACKAGE_URL=\\"\\" -DPACKAGE=\\"clworkpool\\" -DVERSION=\\"0.1\\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\\".libs\/\\"$/;"	m
+DEFS	lib/Makefile	/^DEFS = -DPACKAGE_NAME=\\"clWorkpool\\" -DPACKAGE_TARNAME=\\"clworkpool\\" -DPACKAGE_VERSION=\\"0.1\\" -DPACKAGE_STRING=\\"clWorkpool\\ 0.1\\" -DPACKAGE_BUGREPORT=\\"\\" -DPACKAGE_URL=\\"\\" -DPACKAGE=\\"clworkpool\\" -DVERSION=\\"0.1\\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\\".libs\/\\"$/;"	m
+DEFS	src/Makefile	/^DEFS = -DPACKAGE_NAME=\\"clWorkpool\\" -DPACKAGE_TARNAME=\\"clworkpool\\" -DPACKAGE_VERSION=\\"0.1\\" -DPACKAGE_STRING=\\"clWorkpool\\ 0.1\\" -DPACKAGE_BUGREPORT=\\"\\" -DPACKAGE_URL=\\"\\" -DPACKAGE=\\"clworkpool\\" -DVERSION=\\"0.1\\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\\".libs\/\\"$/;"	m
+DEFS	src/vecadd/Makefile	/^DEFS = -DPACKAGE_NAME=\\"clWorkpool\\" -DPACKAGE_TARNAME=\\"clworkpool\\" -DPACKAGE_VERSION=\\"0.1\\" -DPACKAGE_STRING=\\"clWorkpool\\ 0.1\\" -DPACKAGE_BUGREPORT=\\"\\" -DPACKAGE_URL=\\"\\" -DPACKAGE=\\"clworkpool\\" -DVERSION=\\"0.1\\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\\".libs\/\\"$/;"	m
 DELTA_EPOCH_IN_MICROSECS	lib/gettimeofday.cpp	11;"	d	file:
 DEPDIR	Makefile	/^DEPDIR = .deps$/;"	m
 DEPDIR	lib/Makefile	/^DEPDIR = .deps$/;"	m
+DEPDIR	src/Makefile	/^DEPDIR = .deps$/;"	m
+DEPDIR	src/vecadd/Makefile	/^DEPDIR = .deps$/;"	m
 DISTFILES	Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
 DISTFILES	lib/Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
+DISTFILES	src/Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
+DISTFILES	src/vecadd/Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
 DIST_ARCHIVES	Makefile	/^DIST_ARCHIVES = $(distdir).tar.gz$/;"	m
 DIST_COMMON	Makefile	/^DIST_COMMON = $(am__configure_deps) $(srcdir)\/Makefile.am \\$/;"	m
 DIST_COMMON	lib/Makefile	/^DIST_COMMON = $(srcdir)\/Makefile.am $(srcdir)\/Makefile.in$/;"	m
+DIST_COMMON	src/Makefile	/^DIST_COMMON = $(srcdir)\/Makefile.am $(srcdir)\/Makefile.in$/;"	m
+DIST_COMMON	src/vecadd/Makefile	/^DIST_COMMON = $(srcdir)\/Makefile.am $(srcdir)\/Makefile.in$/;"	m
 DIST_SOURCES	Makefile	/^DIST_SOURCES =$/;"	m
-DIST_SOURCES	lib/Makefile	/^DIST_SOURCES = $(__top_builddir__lib_libcl_workpool_la_SOURCES)$/;"	m
+DIST_SOURCES	lib/Makefile	/^DIST_SOURCES = $(am__libclworkpool_la_SOURCES_DIST)$/;"	m
+DIST_SOURCES	src/Makefile	/^DIST_SOURCES =$/;"	m
+DIST_SOURCES	src/vecadd/Makefile	/^DIST_SOURCES = $(vecadd_SOURCES)$/;"	m
 DIST_SUBDIRS	Makefile	/^DIST_SUBDIRS = $(SUBDIRS)$/;"	m
+DIST_SUBDIRS	src/Makefile	/^DIST_SUBDIRS = $(SUBDIRS)$/;"	m
 DLLTOOL	Makefile	/^DLLTOOL = false$/;"	m
 DLLTOOL	lib/Makefile	/^DLLTOOL = false$/;"	m
+DLLTOOL	src/Makefile	/^DLLTOOL = false$/;"	m
+DLLTOOL	src/vecadd/Makefile	/^DLLTOOL = false$/;"	m
 DOWN	lib/clExtensions.h	348;"	d
 DSYMUTIL	Makefile	/^DSYMUTIL = $/;"	m
 DSYMUTIL	lib/Makefile	/^DSYMUTIL = $/;"	m
+DSYMUTIL	src/Makefile	/^DSYMUTIL = $/;"	m
+DSYMUTIL	src/vecadd/Makefile	/^DSYMUTIL = $/;"	m
 DUMPBIN	Makefile	/^DUMPBIN = $/;"	m
 DUMPBIN	lib/Makefile	/^DUMPBIN = $/;"	m
+DUMPBIN	src/Makefile	/^DUMPBIN = $/;"	m
+DUMPBIN	src/vecadd/Makefile	/^DUMPBIN = $/;"	m
 ECHO_C	Makefile	/^ECHO_C = $/;"	m
 ECHO_C	lib/Makefile	/^ECHO_C = $/;"	m
+ECHO_C	src/Makefile	/^ECHO_C = $/;"	m
+ECHO_C	src/vecadd/Makefile	/^ECHO_C = $/;"	m
 ECHO_N	Makefile	/^ECHO_N = -n$/;"	m
 ECHO_N	lib/Makefile	/^ECHO_N = -n$/;"	m
+ECHO_N	src/Makefile	/^ECHO_N = -n$/;"	m
+ECHO_N	src/vecadd/Makefile	/^ECHO_N = -n$/;"	m
 ECHO_T	Makefile	/^ECHO_T = $/;"	m
 ECHO_T	lib/Makefile	/^ECHO_T = $/;"	m
+ECHO_T	src/Makefile	/^ECHO_T = $/;"	m
+ECHO_T	src/vecadd/Makefile	/^ECHO_T = $/;"	m
 EGREP	Makefile	/^EGREP = \/bin\/grep -E$/;"	m
 EGREP	lib/Makefile	/^EGREP = \/bin\/grep -E$/;"	m
+EGREP	src/Makefile	/^EGREP = \/bin\/grep -E$/;"	m
+EGREP	src/vecadd/Makefile	/^EGREP = \/bin\/grep -E$/;"	m
 ETAGS	Makefile	/^ETAGS = etags$/;"	m
 ETAGS	lib/Makefile	/^ETAGS = etags$/;"	m
+ETAGS	src/Makefile	/^ETAGS = etags$/;"	m
+ETAGS	src/vecadd/Makefile	/^ETAGS = etags$/;"	m
 EXEEXT	Makefile	/^EXEEXT = $/;"	m
 EXEEXT	lib/Makefile	/^EXEEXT = $/;"	m
+EXEEXT	src/Makefile	/^EXEEXT = $/;"	m
+EXEEXT	src/vecadd/Makefile	/^EXEEXT = $/;"	m
 FALSE	lib/clExtensions.h	99;"	d
 FGREP	Makefile	/^FGREP = \/bin\/grep -F$/;"	m
 FGREP	lib/Makefile	/^FGREP = \/bin\/grep -F$/;"	m
+FGREP	src/Makefile	/^FGREP = \/bin\/grep -F$/;"	m
+FGREP	src/vecadd/Makefile	/^FGREP = \/bin\/grep -F$/;"	m
 FLOAT_ARRAY_TYPE	lib/clExtensions.h	343;"	d
 GREP	Makefile	/^GREP = \/bin\/grep$/;"	m
 GREP	lib/Makefile	/^GREP = \/bin\/grep$/;"	m
+GREP	src/Makefile	/^GREP = \/bin\/grep$/;"	m
+GREP	src/vecadd/Makefile	/^GREP = \/bin\/grep$/;"	m
 GZIP_ENV	Makefile	/^GZIP_ENV = --best$/;"	m
 INIT_CL_EXT_FCN_PTR	lib/clExtensions.h	22;"	d
 INSTALL	Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
 INSTALL	lib/Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
+INSTALL	src/Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
+INSTALL	src/vecadd/Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
 INSTALL_DATA	Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
 INSTALL_DATA	lib/Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
+INSTALL_DATA	src/Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
+INSTALL_DATA	src/vecadd/Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
 INSTALL_HEADER	Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
 INSTALL_HEADER	lib/Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
+INSTALL_HEADER	src/Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
+INSTALL_HEADER	src/vecadd/Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
 INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
 INSTALL_PROGRAM	lib/Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
+INSTALL_PROGRAM	src/Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
+INSTALL_PROGRAM	src/vecadd/Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
 INSTALL_SCRIPT	Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
 INSTALL_SCRIPT	lib/Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
+INSTALL_SCRIPT	src/Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
+INSTALL_SCRIPT	src/vecadd/Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
 INSTALL_STRIP_PROGRAM	Makefile	/^INSTALL_STRIP_PROGRAM = $(install_sh) -c -s$/;"	m
 INSTALL_STRIP_PROGRAM	lib/Makefile	/^INSTALL_STRIP_PROGRAM = $(install_sh) -c -s$/;"	m
+INSTALL_STRIP_PROGRAM	src/Makefile	/^INSTALL_STRIP_PROGRAM = $(install_sh) -c -s$/;"	m
+INSTALL_STRIP_PROGRAM	src/vecadd/Makefile	/^INSTALL_STRIP_PROGRAM = $(install_sh) -c -s$/;"	m
 INT_ARRAY_TYPE	lib/clExtensions.h	342;"	d
 INT_TYPE	lib/clExtensions.h	344;"	d
 LD	Makefile	/^LD = \/usr\/bin\/ld$/;"	m
 LD	lib/Makefile	/^LD = \/usr\/bin\/ld$/;"	m
+LD	src/Makefile	/^LD = \/usr\/bin\/ld$/;"	m
+LD	src/vecadd/Makefile	/^LD = \/usr\/bin\/ld$/;"	m
 LDFLAGS	Makefile	/^LDFLAGS = $/;"	m
 LDFLAGS	lib/Makefile	/^LDFLAGS = $/;"	m
+LDFLAGS	src/Makefile	/^LDFLAGS = $/;"	m
+LDFLAGS	src/vecadd/Makefile	/^LDFLAGS = $/;"	m
 LIBOBJS	Makefile	/^LIBOBJS = $/;"	m
 LIBOBJS	lib/Makefile	/^LIBOBJS = $/;"	m
+LIBOBJS	src/Makefile	/^LIBOBJS = $/;"	m
+LIBOBJS	src/vecadd/Makefile	/^LIBOBJS = $/;"	m
 LIBS	Makefile	/^LIBS = $/;"	m
 LIBS	lib/Makefile	/^LIBS = $/;"	m
+LIBS	src/Makefile	/^LIBS = $/;"	m
+LIBS	src/vecadd/Makefile	/^LIBS = $/;"	m
 LIBTOOL	Makefile	/^LIBTOOL = $(SHELL) $(top_builddir)\/libtool$/;"	m
 LIBTOOL	lib/Makefile	/^LIBTOOL = $(SHELL) $(top_builddir)\/libtool$/;"	m
-LINK	lib/Makefile	/^LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \\$/;"	m
+LIBTOOL	src/Makefile	/^LIBTOOL = $(SHELL) $(top_builddir)\/libtool$/;"	m
+LIBTOOL	src/vecadd/Makefile	/^LIBTOOL = $(SHELL) $(top_builddir)\/libtool$/;"	m
+LINK	lib/Makefile	/^LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \\$/;"	m
+LINK	src/vecadd/Makefile	/^LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \\$/;"	m
 LIPO	Makefile	/^LIPO = $/;"	m
 LIPO	lib/Makefile	/^LIPO = $/;"	m
+LIPO	src/Makefile	/^LIPO = $/;"	m
+LIPO	src/vecadd/Makefile	/^LIPO = $/;"	m
 LN_S	Makefile	/^LN_S = ln -s$/;"	m
 LN_S	lib/Makefile	/^LN_S = ln -s$/;"	m
-LTCOMPILE	lib/Makefile	/^LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \\$/;"	m
-LTCXXCOMPILE	lib/Makefile	/^LTCXXCOMPILE = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \\$/;"	m
+LN_S	src/Makefile	/^LN_S = ln -s$/;"	m
+LN_S	src/vecadd/Makefile	/^LN_S = ln -s$/;"	m
+LTCOMPILE	lib/Makefile	/^LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \\$/;"	m
+LTCOMPILE	src/vecadd/Makefile	/^LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \\$/;"	m
+LTCXXCOMPILE	lib/Makefile	/^LTCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \\$/;"	m
+LTCXXCOMPILE	src/vecadd/Makefile	/^LTCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \\$/;"	m
 LTLIBOBJS	Makefile	/^LTLIBOBJS = $/;"	m
 LTLIBOBJS	lib/Makefile	/^LTLIBOBJS = $/;"	m
+LTLIBOBJS	src/Makefile	/^LTLIBOBJS = $/;"	m
+LTLIBOBJS	src/vecadd/Makefile	/^LTLIBOBJS = $/;"	m
 LTLIBRARIES	lib/Makefile	/^LTLIBRARIES = $(lib_LTLIBRARIES)$/;"	m
 MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run makeinfo$/;"	m
 MAKEINFO	lib/Makefile	/^MAKEINFO = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run makeinfo$/;"	m
+MAKEINFO	src/Makefile	/^MAKEINFO = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run makeinfo$/;"	m
+MAKEINFO	src/vecadd/Makefile	/^MAKEINFO = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/missing --run makeinfo$/;"	m
 MANIFEST_TOOL	Makefile	/^MANIFEST_TOOL = :$/;"	m
 MANIFEST_TOOL	lib/Makefile	/^MANIFEST_TOOL = :$/;"	m
+MANIFEST_TOOL	src/Makefile	/^MANIFEST_TOOL = :$/;"	m
+MANIFEST_TOOL	src/vecadd/Makefile	/^MANIFEST_TOOL = :$/;"	m
 MAX_ERR_VAL	lib/clExtensions.h	102;"	d
 MKDIR_P	Makefile	/^MKDIR_P = \/bin\/mkdir -p$/;"	m
 MKDIR_P	lib/Makefile	/^MKDIR_P = \/bin\/mkdir -p$/;"	m
+MKDIR_P	src/Makefile	/^MKDIR_P = \/bin\/mkdir -p$/;"	m
+MKDIR_P	src/vecadd/Makefile	/^MKDIR_P = \/bin\/mkdir -p$/;"	m
 NM	Makefile	/^NM = \/usr\/bin\/nm -B$/;"	m
 NM	lib/Makefile	/^NM = \/usr\/bin\/nm -B$/;"	m
+NM	src/Makefile	/^NM = \/usr\/bin\/nm -B$/;"	m
+NM	src/vecadd/Makefile	/^NM = \/usr\/bin\/nm -B$/;"	m
 NMEDIT	Makefile	/^NMEDIT = $/;"	m
 NMEDIT	lib/Makefile	/^NMEDIT = $/;"	m
+NMEDIT	src/Makefile	/^NMEDIT = $/;"	m
+NMEDIT	src/vecadd/Makefile	/^NMEDIT = $/;"	m
 NORMAL_INSTALL	Makefile	/^NORMAL_INSTALL = :$/;"	m
 NORMAL_INSTALL	lib/Makefile	/^NORMAL_INSTALL = :$/;"	m
+NORMAL_INSTALL	src/Makefile	/^NORMAL_INSTALL = :$/;"	m
+NORMAL_INSTALL	src/vecadd/Makefile	/^NORMAL_INSTALL = :$/;"	m
 NORMAL_UNINSTALL	Makefile	/^NORMAL_UNINSTALL = :$/;"	m
 NORMAL_UNINSTALL	lib/Makefile	/^NORMAL_UNINSTALL = :$/;"	m
+NORMAL_UNINSTALL	src/Makefile	/^NORMAL_UNINSTALL = :$/;"	m
+NORMAL_UNINSTALL	src/vecadd/Makefile	/^NORMAL_UNINSTALL = :$/;"	m
 OBJDUMP	Makefile	/^OBJDUMP = objdump$/;"	m
 OBJDUMP	lib/Makefile	/^OBJDUMP = objdump$/;"	m
+OBJDUMP	src/Makefile	/^OBJDUMP = objdump$/;"	m
+OBJDUMP	src/vecadd/Makefile	/^OBJDUMP = objdump$/;"	m
 OBJEXT	Makefile	/^OBJEXT = o$/;"	m
 OBJEXT	lib/Makefile	/^OBJEXT = o$/;"	m
+OBJEXT	src/Makefile	/^OBJEXT = o$/;"	m
+OBJEXT	src/vecadd/Makefile	/^OBJEXT = o$/;"	m
 OTOOL	Makefile	/^OTOOL = $/;"	m
 OTOOL	lib/Makefile	/^OTOOL = $/;"	m
+OTOOL	src/Makefile	/^OTOOL = $/;"	m
+OTOOL	src/vecadd/Makefile	/^OTOOL = $/;"	m
 OTOOL64	Makefile	/^OTOOL64 = $/;"	m
 OTOOL64	lib/Makefile	/^OTOOL64 = $/;"	m
+OTOOL64	src/Makefile	/^OTOOL64 = $/;"	m
+OTOOL64	src/vecadd/Makefile	/^OTOOL64 = $/;"	m
 PACKAGE	Makefile	/^PACKAGE = clworkpool$/;"	m
 PACKAGE	lib/Makefile	/^PACKAGE = clworkpool$/;"	m
+PACKAGE	src/Makefile	/^PACKAGE = clworkpool$/;"	m
+PACKAGE	src/vecadd/Makefile	/^PACKAGE = clworkpool$/;"	m
 PACKAGE_BUGREPORT	Makefile	/^PACKAGE_BUGREPORT = $/;"	m
 PACKAGE_BUGREPORT	lib/Makefile	/^PACKAGE_BUGREPORT = $/;"	m
+PACKAGE_BUGREPORT	src/Makefile	/^PACKAGE_BUGREPORT = $/;"	m
+PACKAGE_BUGREPORT	src/vecadd/Makefile	/^PACKAGE_BUGREPORT = $/;"	m
 PACKAGE_NAME	Makefile	/^PACKAGE_NAME = clWorkpool$/;"	m
 PACKAGE_NAME	lib/Makefile	/^PACKAGE_NAME = clWorkpool$/;"	m
+PACKAGE_NAME	src/Makefile	/^PACKAGE_NAME = clWorkpool$/;"	m
+PACKAGE_NAME	src/vecadd/Makefile	/^PACKAGE_NAME = clWorkpool$/;"	m
 PACKAGE_STRING	Makefile	/^PACKAGE_STRING = clWorkpool 0.1$/;"	m
 PACKAGE_STRING	lib/Makefile	/^PACKAGE_STRING = clWorkpool 0.1$/;"	m
+PACKAGE_STRING	src/Makefile	/^PACKAGE_STRING = clWorkpool 0.1$/;"	m
+PACKAGE_STRING	src/vecadd/Makefile	/^PACKAGE_STRING = clWorkpool 0.1$/;"	m
 PACKAGE_TARNAME	Makefile	/^PACKAGE_TARNAME = clworkpool$/;"	m
 PACKAGE_TARNAME	lib/Makefile	/^PACKAGE_TARNAME = clworkpool$/;"	m
+PACKAGE_TARNAME	src/Makefile	/^PACKAGE_TARNAME = clworkpool$/;"	m
+PACKAGE_TARNAME	src/vecadd/Makefile	/^PACKAGE_TARNAME = clworkpool$/;"	m
 PACKAGE_URL	Makefile	/^PACKAGE_URL = $/;"	m
 PACKAGE_URL	lib/Makefile	/^PACKAGE_URL = $/;"	m
+PACKAGE_URL	src/Makefile	/^PACKAGE_URL = $/;"	m
+PACKAGE_URL	src/vecadd/Makefile	/^PACKAGE_URL = $/;"	m
 PACKAGE_VERSION	Makefile	/^PACKAGE_VERSION = 0.1$/;"	m
 PACKAGE_VERSION	lib/Makefile	/^PACKAGE_VERSION = 0.1$/;"	m
+PACKAGE_VERSION	src/Makefile	/^PACKAGE_VERSION = 0.1$/;"	m
+PACKAGE_VERSION	src/vecadd/Makefile	/^PACKAGE_VERSION = 0.1$/;"	m
 PATH_SEPARATOR	Makefile	/^PATH_SEPARATOR = :$/;"	m
 PATH_SEPARATOR	lib/Makefile	/^PATH_SEPARATOR = :$/;"	m
+PATH_SEPARATOR	src/Makefile	/^PATH_SEPARATOR = :$/;"	m
+PATH_SEPARATOR	src/vecadd/Makefile	/^PATH_SEPARATOR = :$/;"	m
 POST_INSTALL	Makefile	/^POST_INSTALL = :$/;"	m
 POST_INSTALL	lib/Makefile	/^POST_INSTALL = :$/;"	m
+POST_INSTALL	src/Makefile	/^POST_INSTALL = :$/;"	m
+POST_INSTALL	src/vecadd/Makefile	/^POST_INSTALL = :$/;"	m
 POST_UNINSTALL	Makefile	/^POST_UNINSTALL = :$/;"	m
 POST_UNINSTALL	lib/Makefile	/^POST_UNINSTALL = :$/;"	m
+POST_UNINSTALL	src/Makefile	/^POST_UNINSTALL = :$/;"	m
+POST_UNINSTALL	src/vecadd/Makefile	/^POST_UNINSTALL = :$/;"	m
 PRE_INSTALL	Makefile	/^PRE_INSTALL = :$/;"	m
 PRE_INSTALL	lib/Makefile	/^PRE_INSTALL = :$/;"	m
+PRE_INSTALL	src/Makefile	/^PRE_INSTALL = :$/;"	m
+PRE_INSTALL	src/vecadd/Makefile	/^PRE_INSTALL = :$/;"	m
 PRE_UNINSTALL	Makefile	/^PRE_UNINSTALL = :$/;"	m
 PRE_UNINSTALL	lib/Makefile	/^PRE_UNINSTALL = :$/;"	m
+PRE_UNINSTALL	src/Makefile	/^PRE_UNINSTALL = :$/;"	m
+PRE_UNINSTALL	src/vecadd/Makefile	/^PRE_UNINSTALL = :$/;"	m
 PRIORITY_LEVEL	lib/clExtensions.h	18;"	d
+PROGRAMS	src/vecadd/Makefile	/^PROGRAMS = $(bin_PROGRAMS)$/;"	m
 RANLIB	Makefile	/^RANLIB = ranlib$/;"	m
 RANLIB	lib/Makefile	/^RANLIB = ranlib$/;"	m
+RANLIB	src/Makefile	/^RANLIB = ranlib$/;"	m
+RANLIB	src/vecadd/Makefile	/^RANLIB = ranlib$/;"	m
 READ_ONLY	lib/clExtensions.h	338;"	d
 READ_WRITE	lib/clExtensions.h	340;"	d
 RECURSIVE_CLEAN_TARGETS	Makefile	/^RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\\$/;"	m
+RECURSIVE_CLEAN_TARGETS	src/Makefile	/^RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\\$/;"	m
 RECURSIVE_TARGETS	Makefile	/^RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \\$/;"	m
+RECURSIVE_TARGETS	src/Makefile	/^RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \\$/;"	m
 SAME_VEC_NUMBER	src/vecadd/vectoradd.cpp	8;"	d	file:
 SED	Makefile	/^SED = \/bin\/sed$/;"	m
 SED	lib/Makefile	/^SED = \/bin\/sed$/;"	m
+SED	src/Makefile	/^SED = \/bin\/sed$/;"	m
+SED	src/vecadd/Makefile	/^SED = \/bin\/sed$/;"	m
 SET_MAKE	Makefile	/^SET_MAKE = $/;"	m
 SET_MAKE	lib/Makefile	/^SET_MAKE = $/;"	m
+SET_MAKE	src/Makefile	/^SET_MAKE = $/;"	m
+SET_MAKE	src/vecadd/Makefile	/^SET_MAKE = $/;"	m
 SHELL	Makefile	/^SHELL = \/bin\/bash$/;"	m
 SHELL	lib/Makefile	/^SHELL = \/bin\/bash$/;"	m
+SHELL	src/Makefile	/^SHELL = \/bin\/bash$/;"	m
+SHELL	src/vecadd/Makefile	/^SHELL = \/bin\/bash$/;"	m
 SOURCES	Makefile	/^SOURCES =$/;"	m
-SOURCES	lib/Makefile	/^SOURCES = $(__top_builddir__lib_libcl_workpool_la_SOURCES)$/;"	m
+SOURCES	lib/Makefile	/^SOURCES = $(libclworkpool_la_SOURCES)$/;"	m
+SOURCES	src/Makefile	/^SOURCES =$/;"	m
+SOURCES	src/vecadd/Makefile	/^SOURCES = $(vecadd_SOURCES)$/;"	m
 STATIC_ABILITY	lib/clExtensions.cpp	14;"	d	file:
 STAY	lib/clExtensions.h	346;"	d
 STRIP	Makefile	/^STRIP = strip$/;"	m
 STRIP	lib/Makefile	/^STRIP = strip$/;"	m
+STRIP	src/Makefile	/^STRIP = strip$/;"	m
+STRIP	src/vecadd/Makefile	/^STRIP = strip$/;"	m
 SUBDIRS	Makefile	/^SUBDIRS = \\$/;"	m
-TEST_OPENCL_INCLUDES	Makefile	/^TEST_OPENCL_INCLUDES =           -I$(top_srcdir)\/include           $/;"	m
-TEST_OPENCL_INCLUDES	lib/Makefile	/^TEST_OPENCL_INCLUDES =           -I$(top_srcdir)\/include           $/;"	m
+SUBDIRS	src/Makefile	/^SUBDIRS = \\$/;"	m
 TRUE	lib/clExtensions.h	100;"	d
 UP	lib/clExtensions.h	347;"	d
 VEC_NUMBER	src/vecadd/vectoradd.cpp	7;"	d	file:
 VERSION	Makefile	/^VERSION = 0.1$/;"	m
 VERSION	lib/Makefile	/^VERSION = 0.1$/;"	m
+VERSION	src/Makefile	/^VERSION = 0.1$/;"	m
+VERSION	src/vecadd/Makefile	/^VERSION = 0.1$/;"	m
 WORKPOOL_CAP	lib/clExtensions.h	17;"	d
 WORK_POOL_EMPTY	lib/clExtensions.h	110;"	d
 WORK_POOL_FAIL	lib/clExtensions.h	113;"	d
@@ -219,11 +422,6 @@ WORK_POOL_FULL	lib/clExtensions.h	112;"	d
 WORK_POOL_INIT	lib/clExtensions.h	109;"	d
 WORK_POOL_NONEMPTY	lib/clExtensions.h	111;"	d
 WRITE_ONLY	lib/clExtensions.h	339;"	d
-__top_builddir__lib_libcl_workpool_la_LDFLAGS	lib/Makefile	/^__top_builddir__lib_libcl_workpool_la_LDFLAGS = -version-info 1:0:0$/;"	m
-__top_builddir__lib_libcl_workpool_la_LIBADD	lib/Makefile	/^__top_builddir__lib_libcl_workpool_la_LIBADD =$/;"	m
-__top_builddir__lib_libcl_workpool_la_LINK	lib/Makefile	/^__top_builddir__lib_libcl_workpool_la_LINK = $(LIBTOOL) --tag=CXX \\$/;"	m
-__top_builddir__lib_libcl_workpool_la_OBJECTS	lib/Makefile	/^__top_builddir__lib_libcl_workpool_la_OBJECTS =  \\$/;"	m
-__top_builddir__lib_libcl_workpool_la_SOURCES	lib/Makefile	/^__top_builddir__lib_libcl_workpool_la_SOURCES = \\$/;"	m
 _buffer_entry	lib/clExtensions.h	/^} _buffer_entry, *buffer_entry;$/;"	t	typeref:struct:__anon7
 _buffer_table	lib/clExtensions.h	/^} _buffer_table, buffer_table;$/;"	t	typeref:struct:__anon8
 _cl_dependency	lib/clExtensions.h	/^} _cl_dependency, *cl_dependency;$/;"	t	typeref:struct:__anon2
@@ -236,23 +434,38 @@ _work_unit_arg	lib/clExtensions.h	/^} _work_unit_arg, *work_unit_arg;$/;"	t	type
 _work_unit_dependency	lib/clExtensions.h	/^} _work_unit_dependency, *work_unit_dependency;$/;"	t	typeref:struct:__anon4
 abs_builddir	Makefile	/^abs_builddir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
 abs_builddir	lib/Makefile	/^abs_builddir = \/media\/Data\/Xiang\/cl_workpool\/lib$/;"	m
+abs_builddir	src/Makefile	/^abs_builddir = \/media\/Data\/Xiang\/cl_workpool\/src$/;"	m
+abs_builddir	src/vecadd/Makefile	/^abs_builddir = \/media\/Data\/Xiang\/cl_workpool\/src\/vecadd$/;"	m
 abs_srcdir	Makefile	/^abs_srcdir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
 abs_srcdir	lib/Makefile	/^abs_srcdir = \/media\/Data\/Xiang\/cl_workpool\/lib$/;"	m
+abs_srcdir	src/Makefile	/^abs_srcdir = \/media\/Data\/Xiang\/cl_workpool\/src$/;"	m
+abs_srcdir	src/vecadd/Makefile	/^abs_srcdir = \/media\/Data\/Xiang\/cl_workpool\/src\/vecadd$/;"	m
 abs_top_builddir	Makefile	/^abs_top_builddir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
 abs_top_builddir	lib/Makefile	/^abs_top_builddir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
+abs_top_builddir	src/Makefile	/^abs_top_builddir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
+abs_top_builddir	src/vecadd/Makefile	/^abs_top_builddir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
 abs_top_srcdir	Makefile	/^abs_top_srcdir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
 abs_top_srcdir	lib/Makefile	/^abs_top_srcdir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
+abs_top_srcdir	src/Makefile	/^abs_top_srcdir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
+abs_top_srcdir	src/vecadd/Makefile	/^abs_top_srcdir = \/media\/Data\/Xiang\/cl_workpool$/;"	m
 ac_ct_AR	Makefile	/^ac_ct_AR = ar$/;"	m
 ac_ct_AR	lib/Makefile	/^ac_ct_AR = ar$/;"	m
+ac_ct_AR	src/Makefile	/^ac_ct_AR = ar$/;"	m
+ac_ct_AR	src/vecadd/Makefile	/^ac_ct_AR = ar$/;"	m
 ac_ct_CC	Makefile	/^ac_ct_CC = gcc$/;"	m
 ac_ct_CC	lib/Makefile	/^ac_ct_CC = gcc$/;"	m
+ac_ct_CC	src/Makefile	/^ac_ct_CC = gcc$/;"	m
+ac_ct_CC	src/vecadd/Makefile	/^ac_ct_CC = gcc$/;"	m
 ac_ct_CXX	Makefile	/^ac_ct_CXX = g++$/;"	m
 ac_ct_CXX	lib/Makefile	/^ac_ct_CXX = g++$/;"	m
+ac_ct_CXX	src/Makefile	/^ac_ct_CXX = g++$/;"	m
+ac_ct_CXX	src/vecadd/Makefile	/^ac_ct_CXX = g++$/;"	m
 ac_ct_DUMPBIN	Makefile	/^ac_ct_DUMPBIN = $/;"	m
 ac_ct_DUMPBIN	lib/Makefile	/^ac_ct_DUMPBIN = $/;"	m
+ac_ct_DUMPBIN	src/Makefile	/^ac_ct_DUMPBIN = $/;"	m
+ac_ct_DUMPBIN	src/vecadd/Makefile	/^ac_ct_DUMPBIN = $/;"	m
 ac_fn_c_check_func	configure	/^ac_fn_c_check_func ()$/;"	f
 ac_fn_c_check_header_compile	configure	/^ac_fn_c_check_header_compile ()$/;"	f
-ac_fn_c_check_header_mongrel	configure	/^ac_fn_c_check_header_mongrel ()$/;"	f
 ac_fn_c_try_compile	configure	/^ac_fn_c_try_compile ()$/;"	f
 ac_fn_c_try_cpp	configure	/^ac_fn_c_try_cpp ()$/;"	f
 ac_fn_c_try_link	configure	/^ac_fn_c_try_link ()$/;"	f
@@ -261,39 +474,97 @@ ac_fn_cxx_try_compile	configure	/^ac_fn_cxx_try_compile ()$/;"	f
 ac_fn_cxx_try_cpp	configure	/^ac_fn_cxx_try_cpp ()$/;"	f
 ac_fn_cxx_try_link	configure	/^ac_fn_cxx_try_link ()$/;"	f
 am__CONFIG_DISTCLEAN_FILES	Makefile	/^am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \\$/;"	m
-am___top_builddir__lib_libcl_workpool_la_OBJECTS	lib/Makefile	/^am___top_builddir__lib_libcl_workpool_la_OBJECTS = clExtensions.lo \\$/;"	m
 am__aclocal_m4_deps	Makefile	/^am__aclocal_m4_deps = $(top_srcdir)\/configure.ac$/;"	m
 am__aclocal_m4_deps	lib/Makefile	/^am__aclocal_m4_deps = $(top_srcdir)\/configure.ac$/;"	m
+am__aclocal_m4_deps	src/Makefile	/^am__aclocal_m4_deps = $(top_srcdir)\/configure.ac$/;"	m
+am__aclocal_m4_deps	src/vecadd/Makefile	/^am__aclocal_m4_deps = $(top_srcdir)\/configure.ac$/;"	m
 am__base_list	lib/Makefile	/^am__base_list = \\$/;"	m
 am__cd	Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
 am__cd	lib/Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
+am__cd	src/Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
+am__cd	src/vecadd/Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
 am__configure_deps	Makefile	/^am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \\$/;"	m
 am__configure_deps	lib/Makefile	/^am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \\$/;"	m
+am__configure_deps	src/Makefile	/^am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \\$/;"	m
+am__configure_deps	src/vecadd/Makefile	/^am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \\$/;"	m
 am__depfiles_maybe	lib/Makefile	/^am__depfiles_maybe = depfiles$/;"	m
-am__dirstamp	lib/Makefile	/^am__dirstamp = $(am__leading_dot)dirstamp$/;"	m
+am__depfiles_maybe	src/vecadd/Makefile	/^am__depfiles_maybe = depfiles$/;"	m
 am__distuninstallcheck_listfiles	Makefile	/^am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \\$/;"	m
 am__include	Makefile	/^am__include = include$/;"	m
 am__include	lib/Makefile	/^am__include = include$/;"	m
+am__include	src/Makefile	/^am__include = include$/;"	m
+am__include	src/vecadd/Makefile	/^am__include = include$/;"	m
 am__install_max	lib/Makefile	/^am__install_max = 40$/;"	m
 am__installdirs	lib/Makefile	/^am__installdirs = "$(DESTDIR)$(libdir)"$/;"	m
+am__installdirs	src/vecadd/Makefile	/^am__installdirs = "$(DESTDIR)$(bindir)"$/;"	m
 am__leading_dot	Makefile	/^am__leading_dot = .$/;"	m
 am__leading_dot	lib/Makefile	/^am__leading_dot = .$/;"	m
+am__leading_dot	src/Makefile	/^am__leading_dot = .$/;"	m
+am__leading_dot	src/vecadd/Makefile	/^am__leading_dot = .$/;"	m
+am__libclworkpool_la_SOURCES_DIST	lib/Makefile	/^am__libclworkpool_la_SOURCES_DIST = clExtensions.cpp clExtensions.h \\$/;"	m
 am__mv	lib/Makefile	/^am__mv = mv -f$/;"	m
+am__mv	src/vecadd/Makefile	/^am__mv = mv -f$/;"	m
 am__nobase_list	lib/Makefile	/^am__nobase_list = $(am__nobase_strip_setup); \\$/;"	m
 am__nobase_strip	lib/Makefile	/^am__nobase_strip = \\$/;"	m
 am__nobase_strip_setup	lib/Makefile	/^am__nobase_strip_setup = \\$/;"	m
 am__quote	Makefile	/^am__quote = $/;"	m
 am__quote	lib/Makefile	/^am__quote = $/;"	m
+am__quote	src/Makefile	/^am__quote = $/;"	m
+am__quote	src/vecadd/Makefile	/^am__quote = $/;"	m
 am__relativize	Makefile	/^am__relativize = \\$/;"	m
+am__relativize	src/Makefile	/^am__relativize = \\$/;"	m
 am__remove_distdir	Makefile	/^am__remove_distdir = \\$/;"	m
 am__strip_dir	lib/Makefile	/^am__strip_dir = f=`echo $$p | sed -e 's|^.*\/||'`;$/;"	m
 am__tar	Makefile	/^am__tar = $${TAR-tar} chof - "$$tardir"$/;"	m
 am__tar	lib/Makefile	/^am__tar = $${TAR-tar} chof - "$$tardir"$/;"	m
+am__tar	src/Makefile	/^am__tar = $${TAR-tar} chof - "$$tardir"$/;"	m
+am__tar	src/vecadd/Makefile	/^am__tar = $${TAR-tar} chof - "$$tardir"$/;"	m
 am__uninstall_files_from_dir	lib/Makefile	/^am__uninstall_files_from_dir = { \\$/;"	m
 am__untar	Makefile	/^am__untar = $${TAR-tar} xf -$/;"	m
 am__untar	lib/Makefile	/^am__untar = $${TAR-tar} xf -$/;"	m
+am__untar	src/Makefile	/^am__untar = $${TAR-tar} xf -$/;"	m
+am__untar	src/vecadd/Makefile	/^am__untar = $${TAR-tar} xf -$/;"	m
+am__v_CCLD_	lib/Makefile	/^am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CCLD_	src/vecadd/Makefile	/^am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CCLD_0	lib/Makefile	/^am__v_CCLD_0 = @echo "  CCLD  " $@;$/;"	m
+am__v_CCLD_0	src/vecadd/Makefile	/^am__v_CCLD_0 = @echo "  CCLD  " $@;$/;"	m
+am__v_CC_	lib/Makefile	/^am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CC_	src/vecadd/Makefile	/^am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CC_0	lib/Makefile	/^am__v_CC_0 = @echo "  CC    " $@;$/;"	m
+am__v_CC_0	src/vecadd/Makefile	/^am__v_CC_0 = @echo "  CC    " $@;$/;"	m
+am__v_CXXLD_	lib/Makefile	/^am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CXXLD_	src/vecadd/Makefile	/^am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CXXLD_0	lib/Makefile	/^am__v_CXXLD_0 = @echo "  CXXLD " $@;$/;"	m
+am__v_CXXLD_0	src/vecadd/Makefile	/^am__v_CXXLD_0 = @echo "  CXXLD " $@;$/;"	m
+am__v_CXX_	lib/Makefile	/^am__v_CXX_ = $(am__v_CXX_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CXX_	src/vecadd/Makefile	/^am__v_CXX_ = $(am__v_CXX_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CXX_0	lib/Makefile	/^am__v_CXX_0 = @echo "  CXX   " $@;$/;"	m
+am__v_CXX_0	src/vecadd/Makefile	/^am__v_CXX_0 = @echo "  CXX   " $@;$/;"	m
+am__v_GEN_	Makefile	/^am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_GEN_	lib/Makefile	/^am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_GEN_	src/Makefile	/^am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_GEN_	src/vecadd/Makefile	/^am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_GEN_0	Makefile	/^am__v_GEN_0 = @echo "  GEN   " $@;$/;"	m
+am__v_GEN_0	lib/Makefile	/^am__v_GEN_0 = @echo "  GEN   " $@;$/;"	m
+am__v_GEN_0	src/Makefile	/^am__v_GEN_0 = @echo "  GEN   " $@;$/;"	m
+am__v_GEN_0	src/vecadd/Makefile	/^am__v_GEN_0 = @echo "  GEN   " $@;$/;"	m
+am__v_at_	Makefile	/^am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_at_	lib/Makefile	/^am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_at_	src/Makefile	/^am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_at_	src/vecadd/Makefile	/^am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_at_0	Makefile	/^am__v_at_0 = @$/;"	m
+am__v_at_0	lib/Makefile	/^am__v_at_0 = @$/;"	m
+am__v_at_0	src/Makefile	/^am__v_at_0 = @$/;"	m
+am__v_at_0	src/vecadd/Makefile	/^am__v_at_0 = @$/;"	m
+am__v_lt_	lib/Makefile	/^am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_lt_	src/vecadd/Makefile	/^am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_lt_0	lib/Makefile	/^am__v_lt_0 = --silent$/;"	m
+am__v_lt_0	src/vecadd/Makefile	/^am__v_lt_0 = --silent$/;"	m
 am__vpath_adj	lib/Makefile	/^am__vpath_adj = case $$p in \\$/;"	m
 am__vpath_adj_setup	lib/Makefile	/^am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;$/;"	m
+am_libclworkpool_la_OBJECTS	lib/Makefile	/^am_libclworkpool_la_OBJECTS = clExtensions.lo \\$/;"	m
+am_libclworkpool_la_rpath	lib/Makefile	/^am_libclworkpool_la_rpath = -rpath $(libdir)$/;"	m
+am_vecadd_OBJECTS	src/vecadd/Makefile	/^am_vecadd_OBJECTS = vectoradd.$(OBJEXT)$/;"	m
 arg_pointer	lib/clExtensions.h	/^	void*				arg_pointer;$/;"	m	struct:__anon9
 arguments	lib/clExtensions.h	/^	std::vector<work_unit_arg> arguments;$/;"	m	class:work_unit
 as_fn_append	config.status	/^  as_fn_append ()$/;"	f
@@ -314,32 +585,49 @@ as_fn_set_status	configure	/^as_fn_set_status ()$/;"	f
 as_fn_success	configure	/^as_fn_success () { as_fn_return 0; }$/;"	f
 as_fn_unset	config.status	/^as_fn_unset ()$/;"	f
 as_fn_unset	configure	/^as_fn_unset ()$/;"	f
+bin_PROGRAMS	src/vecadd/Makefile	/^bin_PROGRAMS = vecadd$(EXEEXT)$/;"	m
 bindir	Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
 bindir	lib/Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
+bindir	src/Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
+bindir	src/vecadd/Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
 buffer	lib/clExtensions.h	/^	cl_mem* buffer;$/;"	m	struct:__anon7
 buffer_entry	lib/clExtensions.h	/^} _buffer_entry, *buffer_entry;$/;"	t	typeref:struct:__anon7
 buffer_table	lib/clExtensions.h	/^		_buffer_table buffer_table;$/;"	m	class:work_pool
 buffer_table	lib/clExtensions.h	/^} _buffer_table, buffer_table;$/;"	t	typeref:struct:__anon8
 build	Makefile	/^build = i686-pc-linux-gnu$/;"	m
 build	lib/Makefile	/^build = i686-pc-linux-gnu$/;"	m
+build	src/Makefile	/^build = i686-pc-linux-gnu$/;"	m
+build	src/vecadd/Makefile	/^build = i686-pc-linux-gnu$/;"	m
 build_alias	Makefile	/^build_alias = $/;"	m
 build_alias	lib/Makefile	/^build_alias = $/;"	m
+build_alias	src/Makefile	/^build_alias = $/;"	m
+build_alias	src/vecadd/Makefile	/^build_alias = $/;"	m
 build_cpu	Makefile	/^build_cpu = i686$/;"	m
 build_cpu	lib/Makefile	/^build_cpu = i686$/;"	m
+build_cpu	src/Makefile	/^build_cpu = i686$/;"	m
+build_cpu	src/vecadd/Makefile	/^build_cpu = i686$/;"	m
 build_os	Makefile	/^build_os = linux-gnu$/;"	m
 build_os	lib/Makefile	/^build_os = linux-gnu$/;"	m
+build_os	src/Makefile	/^build_os = linux-gnu$/;"	m
+build_os	src/vecadd/Makefile	/^build_os = linux-gnu$/;"	m
 build_triplet	Makefile	/^build_triplet = i686-pc-linux-gnu$/;"	m
 build_triplet	lib/Makefile	/^build_triplet = i686-pc-linux-gnu$/;"	m
+build_triplet	src/Makefile	/^build_triplet = i686-pc-linux-gnu$/;"	m
+build_triplet	src/vecadd/Makefile	/^build_triplet = i686-pc-linux-gnu$/;"	m
 build_vendor	Makefile	/^build_vendor = pc$/;"	m
 build_vendor	lib/Makefile	/^build_vendor = pc$/;"	m
+build_vendor	src/Makefile	/^build_vendor = pc$/;"	m
+build_vendor	src/vecadd/Makefile	/^build_vendor = pc$/;"	m
 builddir	Makefile	/^builddir = .$/;"	m
 builddir	lib/Makefile	/^builddir = .$/;"	m
+builddir	src/Makefile	/^builddir = .$/;"	m
+builddir	src/vecadd/Makefile	/^builddir = .$/;"	m
 busy_direction	lib/clExtensions.h	/^	unsigned int *busy_direction; \/\/0-stay;1-UP, more busier;2-DOWN, less busier$/;"	m	class:work_pool
 cl_computeTime	lib/clExtensions.cpp	/^double cl_computeTime(cl_time start, cl_time end) $/;"	f
 cl_dependency	lib/clExtensions.h	/^} _cl_dependency, *cl_dependency;$/;"	t	typeref:struct:__anon2
 cl_errChk	lib/clExtensions.cpp	/^int cl_errChk(const cl_int status, const char * msg, bool exitOnErr)$/;"	f
 cl_errChk_sync	lib/clExtensions.cpp	/^int cl_errChk_sync(const cl_int status, const char * msg, bool exitOnErr)$/;"	f
-cl_errs	lib/clExtensions.cpp	/^	char *cl_errs[MAX_ERR_VAL] = {$/;"	v
+cl_errs	lib/clExtensions.cpp	/^	const char *cl_errs[MAX_ERR_VAL] = {$/;"	v
 cl_getTime	lib/clExtensions.cpp	/^void cl_getTime(cl_time* time) $/;"	f
 cl_time	lib/clExtensions.h	/^typedef __int64 cl_time; $/;"	t
 cl_time	lib/clExtensions.h	/^typedef double cl_time;$/;"	t
@@ -359,10 +647,15 @@ create_kernel	lib/clExtensions.cpp	/^cl_kernel work_unit::create_kernel(cl_progr
 data	lib/clExtensions.h	/^	int data;$/;"	m	struct:__anon7
 datadir	Makefile	/^datadir = ${datarootdir}$/;"	m
 datadir	lib/Makefile	/^datadir = ${datarootdir}$/;"	m
+datadir	src/Makefile	/^datadir = ${datarootdir}$/;"	m
+datadir	src/vecadd/Makefile	/^datadir = ${datarootdir}$/;"	m
 datarootdir	Makefile	/^datarootdir = ${prefix}\/share$/;"	m
 datarootdir	lib/Makefile	/^datarootdir = ${prefix}\/share$/;"	m
+datarootdir	src/Makefile	/^datarootdir = ${prefix}\/share$/;"	m
+datarootdir	src/vecadd/Makefile	/^datarootdir = ${prefix}\/share$/;"	m
 dep	lib/clExtensions.h	/^		work_unit_dependency **dep;$/;"	m	class:work_pool
 depcomp	lib/Makefile	/^depcomp = $(SHELL) $(top_srcdir)\/depcomp$/;"	m
+depcomp	src/vecadd/Makefile	/^depcomp = $(SHELL) $(top_srcdir)\/depcomp$/;"	m
 dependency	lib/clExtensions.h	/^	work_unit_dependency dependency;$/;"	m	class:work_unit
 device	lib/clExtensions.h	/^	cl_device_id device;$/;"	m	struct:__anon5
 device_list	lib/clExtensions.h	/^	cl_device_id* device_list;$/;"	m	struct:__anon3
@@ -376,10 +669,14 @@ distdir	Makefile	/^distdir = $(PACKAGE)-$(VERSION)$/;"	m
 distuninstallcheck_listfiles	Makefile	/^distuninstallcheck_listfiles = find . -type f -print$/;"	m
 docdir	Makefile	/^docdir = ${datarootdir}\/doc\/${PACKAGE_TARNAME}$/;"	m
 docdir	lib/Makefile	/^docdir = ${datarootdir}\/doc\/${PACKAGE_TARNAME}$/;"	m
+docdir	src/Makefile	/^docdir = ${datarootdir}\/doc\/${PACKAGE_TARNAME}$/;"	m
+docdir	src/vecadd/Makefile	/^docdir = ${datarootdir}\/doc\/${PACKAGE_TARNAME}$/;"	m
 done	lib/clExtensions.h	/^		unsigned int done;$/;"	m	class:work_pool
 dtype	lib/clExtensions.h	/^	cl_device_type dtype;$/;"	m	struct:__anon5
 dvidir	Makefile	/^dvidir = ${docdir}$/;"	m
 dvidir	lib/Makefile	/^dvidir = ${docdir}$/;"	m
+dvidir	src/Makefile	/^dvidir = ${docdir}$/;"	m
+dvidir	src/vecadd/Makefile	/^dvidir = ${docdir}$/;"	m
 dynamic_offset	lib/clExtensions.h	/^	int *dynamic_offset;$/;"	m	class:work_pool
 enqueue	lib/clExtensions.cpp	/^void work_pool::enqueue(work_unit* work_unit_in, cl_uint priority, cl_int* status)$/;"	f	class:work_pool
 entry_list	lib/clExtensions.h	/^	std::vector<buffer_entry> entry_list;$/;"	m	struct:__anon8
@@ -387,6 +684,8 @@ event	lib/clExtensions.h	/^	cl_event *event;$/;"	m	struct:__anon4
 event_wait_list	lib/clExtensions.h	/^	const cl_event *event_wait_list;$/;"	m	struct:__anon4
 exec_prefix	Makefile	/^exec_prefix = ${prefix}$/;"	m
 exec_prefix	lib/Makefile	/^exec_prefix = ${prefix}$/;"	m
+exec_prefix	src/Makefile	/^exec_prefix = ${prefix}$/;"	m
+exec_prefix	src/vecadd/Makefile	/^exec_prefix = ${prefix}$/;"	m
 execution_time_queue_per_device	lib/clExtensions.h	/^		double **execution_time_queue_per_device;$/;"	m	class:work_pool
 extract_and_distribute	lib/clExtensions.cpp	/^void work_pool::extract_and_distribute(_work_pool_context context,  $/;"	f	class:work_pool
 extract_done	lib/clExtensions.h	/^		unsigned int extract_done;$/;"	m	class:work_pool
@@ -623,65 +922,110 @@ global_work_size	lib/clExtensions.h	/^	const size_t* global_work_size;$/;"	m	cla
 global_work_size	lib/clExtensions.h	/^	const size_t* global_work_size;$/;"	m	struct:__anon1
 host	Makefile	/^host = i686-pc-linux-gnu$/;"	m
 host	lib/Makefile	/^host = i686-pc-linux-gnu$/;"	m
+host	src/Makefile	/^host = i686-pc-linux-gnu$/;"	m
+host	src/vecadd/Makefile	/^host = i686-pc-linux-gnu$/;"	m
 host_alias	Makefile	/^host_alias = $/;"	m
 host_alias	lib/Makefile	/^host_alias = $/;"	m
+host_alias	src/Makefile	/^host_alias = $/;"	m
+host_alias	src/vecadd/Makefile	/^host_alias = $/;"	m
 host_cpu	Makefile	/^host_cpu = i686$/;"	m
 host_cpu	lib/Makefile	/^host_cpu = i686$/;"	m
+host_cpu	src/Makefile	/^host_cpu = i686$/;"	m
+host_cpu	src/vecadd/Makefile	/^host_cpu = i686$/;"	m
 host_os	Makefile	/^host_os = linux-gnu$/;"	m
 host_os	lib/Makefile	/^host_os = linux-gnu$/;"	m
+host_os	src/Makefile	/^host_os = linux-gnu$/;"	m
+host_os	src/vecadd/Makefile	/^host_os = linux-gnu$/;"	m
 host_triplet	Makefile	/^host_triplet = i686-pc-linux-gnu$/;"	m
 host_triplet	lib/Makefile	/^host_triplet = i686-pc-linux-gnu$/;"	m
+host_triplet	src/Makefile	/^host_triplet = i686-pc-linux-gnu$/;"	m
+host_triplet	src/vecadd/Makefile	/^host_triplet = i686-pc-linux-gnu$/;"	m
 host_vendor	Makefile	/^host_vendor = pc$/;"	m
 host_vendor	lib/Makefile	/^host_vendor = pc$/;"	m
+host_vendor	src/Makefile	/^host_vendor = pc$/;"	m
+host_vendor	src/vecadd/Makefile	/^host_vendor = pc$/;"	m
 htmldir	Makefile	/^htmldir = ${docdir}$/;"	m
 htmldir	lib/Makefile	/^htmldir = ${docdir}$/;"	m
+htmldir	src/Makefile	/^htmldir = ${docdir}$/;"	m
+htmldir	src/vecadd/Makefile	/^htmldir = ${docdir}$/;"	m
 id	lib/clExtensions.h	/^	cl_int id;$/;"	m	struct:__anon2
 id	lib/clExtensions.h	/^	cl_int id;$/;"	m	struct:__anon4
 includedir	Makefile	/^includedir = ${prefix}\/include$/;"	m
 includedir	lib/Makefile	/^includedir = ${prefix}\/include$/;"	m
+includedir	src/Makefile	/^includedir = ${prefix}\/include$/;"	m
+includedir	src/vecadd/Makefile	/^includedir = ${prefix}\/include$/;"	m
 index	lib/clExtensions.h	/^	cl_int              index;$/;"	m	struct:__anon9
 index_end	lib/clExtensions.h	/^		unsigned int index_end;$/;"	m	class:work_pool
 index_in	lib/clExtensions.h	/^		unsigned int index_in;$/;"	m	class:work_pool
 index_out	lib/clExtensions.h	/^		unsigned int index_out;$/;"	m	class:work_pool
 infodir	Makefile	/^infodir = ${datarootdir}\/info$/;"	m
 infodir	lib/Makefile	/^infodir = ${datarootdir}\/info$/;"	m
+infodir	src/Makefile	/^infodir = ${datarootdir}\/info$/;"	m
+infodir	src/vecadd/Makefile	/^infodir = ${datarootdir}\/info$/;"	m
 init	lib/clExtensions.cpp	/^void work_pool::init(int max_size, unsigned int init_number_work_units, cl_int* status)$/;"	f	class:work_pool
 init	lib/clExtensions.cpp	/^void work_unit::init(work_pool *work_pool,$/;"	f	class:work_unit
 init_buffer_table	lib/clExtensions.cpp	/^void work_pool::init_buffer_table(_buffer_table buffer_table)$/;"	f	class:work_pool
 install_sh	Makefile	/^install_sh = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/install-sh$/;"	m
 install_sh	lib/Makefile	/^install_sh = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/install-sh$/;"	m
+install_sh	src/Makefile	/^install_sh = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/install-sh$/;"	m
+install_sh	src/vecadd/Makefile	/^install_sh = ${SHELL} \/media\/Data\/Xiang\/cl_workpool\/install-sh$/;"	m
 install_sh_DATA	Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
 install_sh_DATA	lib/Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
+install_sh_DATA	src/Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
+install_sh_DATA	src/vecadd/Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
 install_sh_PROGRAM	Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
 install_sh_PROGRAM	lib/Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
+install_sh_PROGRAM	src/Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
+install_sh_PROGRAM	src/vecadd/Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
 install_sh_SCRIPT	Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
 install_sh_SCRIPT	lib/Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
+install_sh_SCRIPT	src/Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
+install_sh_SCRIPT	src/vecadd/Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
 kernel	lib/clExtensions.h	/^	cl_kernel kernel;$/;"	m	class:work_unit
 kernel	lib/clExtensions.h	/^	cl_kernel kernel;$/;"	m	struct:__anon1
 kernel_all	lib/clExtensions.h	/^	cl_kernel* kernel_all;$/;"	m	class:work_unit
 kernel_name	lib/clExtensions.h	/^	char* kernel_name;$/;"	m	class:work_unit
-lib_LTLIBRARIES	lib/Makefile	/^lib_LTLIBRARIES = $(top_builddir)\/lib\/libcl-workpool.la$/;"	m
+lib_LTLIBRARIES	lib/Makefile	/^lib_LTLIBRARIES = libclworkpool.la$/;"	m
+libclworkpool_la_LDFLAGS	lib/Makefile	/^libclworkpool_la_LDFLAGS = -lpthread -lOpenCL$/;"	m
+libclworkpool_la_LIBADD	lib/Makefile	/^libclworkpool_la_LIBADD =$/;"	m
+libclworkpool_la_LINK	lib/Makefile	/^libclworkpool_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \\$/;"	m
+libclworkpool_la_OBJECTS	lib/Makefile	/^libclworkpool_la_OBJECTS = $(am_libclworkpool_la_OBJECTS)$/;"	m
+libclworkpool_la_SOURCES	lib/Makefile	/^libclworkpool_la_SOURCES = \\$/;"	m
 libdir	Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
 libdir	lib/Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
+libdir	src/Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
+libdir	src/vecadd/Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
 libexecdir	Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
 libexecdir	lib/Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
+libexecdir	src/Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
+libexecdir	src/vecadd/Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
 local_work_size	lib/clExtensions.h	/^	const size_t* local_work_size;$/;"	m	class:work_unit
 local_work_size	lib/clExtensions.h	/^	const size_t* local_work_size;$/;"	m	struct:__anon1
 localedir	Makefile	/^localedir = ${datarootdir}\/locale$/;"	m
 localedir	lib/Makefile	/^localedir = ${datarootdir}\/locale$/;"	m
+localedir	src/Makefile	/^localedir = ${datarootdir}\/locale$/;"	m
+localedir	src/vecadd/Makefile	/^localedir = ${datarootdir}\/locale$/;"	m
 localstatedir	Makefile	/^localstatedir = ${prefix}\/var$/;"	m
 localstatedir	lib/Makefile	/^localstatedir = ${prefix}\/var$/;"	m
+localstatedir	src/Makefile	/^localstatedir = ${prefix}\/var$/;"	m
+localstatedir	src/vecadd/Makefile	/^localstatedir = ${prefix}\/var$/;"	m
 main	config.guess	/^		main()$/;"	f
 main	config.guess	/^	main ()$/;"	f
 main	config.guess	/^main ()$/;"	f
 main	src/vecadd/vectoradd.cpp	/^int main( int argc, char* argv[] )$/;"	f
 mandir	Makefile	/^mandir = ${datarootdir}\/man$/;"	m
 mandir	lib/Makefile	/^mandir = ${datarootdir}\/man$/;"	m
+mandir	src/Makefile	/^mandir = ${datarootdir}\/man$/;"	m
+mandir	src/vecadd/Makefile	/^mandir = ${datarootdir}\/man$/;"	m
 max_size	lib/clExtensions.h	/^		cl_uint max_size;$/;"	m	class:work_pool
 mkdir_p	Makefile	/^mkdir_p = \/bin\/mkdir -p$/;"	m
 mkdir_p	lib/Makefile	/^mkdir_p = \/bin\/mkdir -p$/;"	m
+mkdir_p	src/Makefile	/^mkdir_p = \/bin\/mkdir -p$/;"	m
+mkdir_p	src/vecadd/Makefile	/^mkdir_p = \/bin\/mkdir -p$/;"	m
 mkinstalldirs	Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
 mkinstalldirs	lib/Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
+mkinstalldirs	src/Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
+mkinstalldirs	src/vecadd/Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
 numPlatforms	lib/clExtensions.h	/^	cl_uint numPlatforms;$/;"	m	class:work_pool
 num_devices	lib/clExtensions.h	/^	cl_int              num_devices;$/;"	m	struct:__anon8
 num_devices	lib/clExtensions.h	/^	cl_int num_devices;$/;"	m	struct:__anon3
@@ -694,17 +1038,29 @@ num_work_units	lib/clExtensions.h	/^		cl_uint num_work_units;$/;"	m	class:work_p
 num_workunits	lib/clExtensions.h	/^	cl_int num_workunits;$/;"	m	struct:__anon2
 oldincludedir	Makefile	/^oldincludedir = \/usr\/include$/;"	m
 oldincludedir	lib/Makefile	/^oldincludedir = \/usr\/include$/;"	m
+oldincludedir	src/Makefile	/^oldincludedir = \/usr\/include$/;"	m
+oldincludedir	src/vecadd/Makefile	/^oldincludedir = \/usr\/include$/;"	m
 pdfdir	Makefile	/^pdfdir = ${docdir}$/;"	m
 pdfdir	lib/Makefile	/^pdfdir = ${docdir}$/;"	m
+pdfdir	src/Makefile	/^pdfdir = ${docdir}$/;"	m
+pdfdir	src/vecadd/Makefile	/^pdfdir = ${docdir}$/;"	m
 pfn_clCreateSubDevicesEXT	lib/clExtensions.cpp	/^static clCreateSubDevicesEXT_fn pfn_clCreateSubDevicesEXT = NULL;$/;"	v	file:
 pkgdatadir	Makefile	/^pkgdatadir = $(datadir)\/clworkpool$/;"	m
 pkgdatadir	lib/Makefile	/^pkgdatadir = $(datadir)\/clworkpool$/;"	m
+pkgdatadir	src/Makefile	/^pkgdatadir = $(datadir)\/clworkpool$/;"	m
+pkgdatadir	src/vecadd/Makefile	/^pkgdatadir = $(datadir)\/clworkpool$/;"	m
 pkgincludedir	Makefile	/^pkgincludedir = $(includedir)\/clworkpool$/;"	m
 pkgincludedir	lib/Makefile	/^pkgincludedir = $(includedir)\/clworkpool$/;"	m
+pkgincludedir	src/Makefile	/^pkgincludedir = $(includedir)\/clworkpool$/;"	m
+pkgincludedir	src/vecadd/Makefile	/^pkgincludedir = $(includedir)\/clworkpool$/;"	m
 pkglibdir	Makefile	/^pkglibdir = $(libdir)\/clworkpool$/;"	m
 pkglibdir	lib/Makefile	/^pkglibdir = $(libdir)\/clworkpool$/;"	m
+pkglibdir	src/Makefile	/^pkglibdir = $(libdir)\/clworkpool$/;"	m
+pkglibdir	src/vecadd/Makefile	/^pkglibdir = $(libdir)\/clworkpool$/;"	m
 pkglibexecdir	Makefile	/^pkglibexecdir = $(libexecdir)\/clworkpool$/;"	m
 pkglibexecdir	lib/Makefile	/^pkglibexecdir = $(libexecdir)\/clworkpool$/;"	m
+pkglibexecdir	src/Makefile	/^pkglibexecdir = $(libexecdir)\/clworkpool$/;"	m
+pkglibexecdir	src/vecadd/Makefile	/^pkglibexecdir = $(libexecdir)\/clworkpool$/;"	m
 platform	lib/clExtensions.h	/^	cl_platform_id platform;$/;"	m	struct:__anon5
 platform_vendor	lib/clExtensions.h	/^	char platform_vendor[100];$/;"	m	struct:__anon5
 platforms	lib/clExtensions.h	/^	cl_platform_id *platforms;$/;"	m	class:work_pool
@@ -714,15 +1070,21 @@ pre_compiled_kernels_per_context	lib/clExtensions.h	/^} _pre_compiled_kernels_pe
 prefer_context	lib/clExtensions.h	/^	cl_context prefer_context;$/;"	m	class:work_unit
 prefix	Makefile	/^prefix = \/usr\/local$/;"	m
 prefix	lib/Makefile	/^prefix = \/usr\/local$/;"	m
+prefix	src/Makefile	/^prefix = \/usr\/local$/;"	m
+prefix	src/vecadd/Makefile	/^prefix = \/usr\/local$/;"	m
 priority	lib/clExtensions.h	/^	cl_uint priority;$/;"	m	class:work_unit
 program	lib/clExtensions.h	/^	cl_program program;$/;"	m	class:work_unit
 program_all	lib/clExtensions.h	/^	cl_program* program_all;$/;"	m	class:work_unit
 program_transform_name	Makefile	/^program_transform_name = s,x,x,$/;"	m
 program_transform_name	lib/Makefile	/^program_transform_name = s,x,x,$/;"	m
+program_transform_name	src/Makefile	/^program_transform_name = s,x,x,$/;"	m
+program_transform_name	src/vecadd/Makefile	/^program_transform_name = s,x,x,$/;"	m
 program_with_path	lib/clExtensions.h	/^	char* program_with_path;$/;"	m	class:work_unit
 prototypes	configure	/^   function prototypes and stuff, but not '\\xHH' hex character constants.$/;"	f
 psdir	Makefile	/^psdir = ${docdir}$/;"	m
 psdir	lib/Makefile	/^psdir = ${docdir}$/;"	m
+psdir	src/Makefile	/^psdir = ${docdir}$/;"	m
+psdir	src/vecadd/Makefile	/^psdir = ${docdir}$/;"	m
 pthread_scheduler	lib/clExtensions.cpp	/^void * pthread_scheduler(void* work_pool_scheduler_arg)$/;"	f
 query	lib/clExtensions.cpp	/^cl_uint work_pool::query()$/;"	f	class:work_pool
 queue_list	lib/clExtensions.h	/^	cl_command_queue* queue_list;$/;"	m	struct:__anon3
@@ -731,20 +1093,30 @@ request_buffer	lib/clExtensions.cpp	/^cl_mem work_pool::request_buffer(_work_poo
 reset_buffer	lib/clExtensions.cpp	/^void work_pool::reset_buffer(int thread_id)$/;"	f	class:work_pool
 sbindir	Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
 sbindir	lib/Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
+sbindir	src/Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
+sbindir	src/vecadd/Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
 scheduler_thread_data	lib/clExtensions.h	/^}_scheduler_thread_data, scheduler_thread_data;$/;"	t	typeref:struct:__anon10
 set_argument	lib/clExtensions.cpp	/^void work_unit::set_argument(cl_int index, cl_int type, cl_int int_value, float float_value, void * data, cl_int data_size, cl_int flag, cl_int * status) $/;"	f	class:work_unit
 set_status	lib/clExtensions.cpp	/^void set_status(cl_int* status, cl_int num) {$/;"	f
 sharedstatedir	Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
 sharedstatedir	lib/Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
+sharedstatedir	src/Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
+sharedstatedir	src/vecadd/Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
 size	lib/clExtensions.h	/^	cl_int              size;$/;"	m	struct:__anon9
 srcdir	Makefile	/^srcdir = .$/;"	m
 srcdir	lib/Makefile	/^srcdir = .$/;"	m
+srcdir	src/Makefile	/^srcdir = .$/;"	m
+srcdir	src/vecadd/Makefile	/^srcdir = .$/;"	m
 starvation	lib/clExtensions.h	/^static int starvation = 0;$/;"	v
 status	lib/clExtensions.h	/^	cl_int status;$/;"	m	struct:__anon1
 subdir	Makefile	/^subdir = .$/;"	m
 subdir	lib/Makefile	/^subdir = lib$/;"	m
+subdir	src/Makefile	/^subdir = src$/;"	m
+subdir	src/vecadd/Makefile	/^subdir = src\/vecadd$/;"	m
 sysconfdir	Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
 sysconfdir	lib/Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
+sysconfdir	src/Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
+sysconfdir	src/vecadd/Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
 tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | BZIP2=$${BZIP2--9} bzip2 -c >$(distdir).tar.bz2$/;"	m
 tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | GZIP=$(GZIP_ENV) gzip -c >$(distdir).tar.gz$/;"	m
 tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | XZ_OPT=$${XZ_OPT--e} xz -c >$(distdir).tar.xz$/;"	m
@@ -753,22 +1125,32 @@ tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | lzip -c $${LZIP_OPT--9} >$(
 tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | lzma -9 -c >$(distdir).tar.lzma$/;"	m
 target_alias	Makefile	/^target_alias = $/;"	m
 target_alias	lib/Makefile	/^target_alias = $/;"	m
+target_alias	src/Makefile	/^target_alias = $/;"	m
+target_alias	src/vecadd/Makefile	/^target_alias = $/;"	m
 thread_exit	lib/clExtensions.h	/^		unsigned int *thread_exit;$/;"	m	class:work_pool
 thread_id	lib/clExtensions.h	/^	int thread_id;$/;"	m	struct:__anon10
 timezone	lib/gettimeofday.cpp	/^struct timezone$/;"	s	file:
 top_build_prefix	Makefile	/^top_build_prefix = $/;"	m
 top_build_prefix	lib/Makefile	/^top_build_prefix = ..\/$/;"	m
+top_build_prefix	src/Makefile	/^top_build_prefix = ..\/$/;"	m
+top_build_prefix	src/vecadd/Makefile	/^top_build_prefix = ..\/..\/$/;"	m
 top_builddir	Makefile	/^top_builddir = .$/;"	m
 top_builddir	lib/Makefile	/^top_builddir = ..$/;"	m
+top_builddir	src/Makefile	/^top_builddir = ..$/;"	m
+top_builddir	src/vecadd/Makefile	/^top_builddir = ..\/..$/;"	m
 top_distdir	Makefile	/^top_distdir = $(distdir)$/;"	m
 top_srcdir	Makefile	/^top_srcdir = .$/;"	m
 top_srcdir	lib/Makefile	/^top_srcdir = ..$/;"	m
+top_srcdir	src/Makefile	/^top_srcdir = ..$/;"	m
+top_srcdir	src/vecadd/Makefile	/^top_srcdir = ..\/..$/;"	m
 total_buffer_time	lib/clExtensions.cpp	/^double total_buffer_time;$/;"	v
 total_num_devices	lib/clExtensions.h	/^		cl_uint total_num_devices;$/;"	m	class:work_pool
 total_transfer_time	lib/clExtensions.cpp	/^double total_transfer_time;$/;"	v
 total_unfinished_work_units	lib/clExtensions.h	/^		unsigned int total_unfinished_work_units;$/;"	m	class:work_pool
 transform	Makefile	/^transform = $(program_transform_name)$/;"	m
 transform	lib/Makefile	/^transform = $(program_transform_name)$/;"	m
+transform	src/Makefile	/^transform = $(program_transform_name)$/;"	m
+transform	src/vecadd/Makefile	/^transform = $(program_transform_name)$/;"	m
 type	lib/clExtensions.h	/^	cl_int              type; \/\/0-pointer to int data array; 1- pointer to float data array; 2-integer value; 3-float value;$/;"	m	struct:__anon9
 tz_dsttime	lib/gettimeofday.cpp	/^  int  tz_dsttime;     \/* type of dst correction *\/$/;"	m	struct:timezone	file:
 tz_minuteswest	lib/gettimeofday.cpp	/^  int  tz_minuteswest; \/* minutes W of Greenwich *\/$/;"	m	struct:timezone	file:
@@ -778,6 +1160,11 @@ unit_start_time	lib/clExtensions.h	/^		cl_time *unit_start_time, *unit_end_time;
 valid_idx	lib/clExtensions.h	/^	cl_int valid_idx;$/;"	m	struct:__anon7
 value_float	lib/clExtensions.h	/^	float               value_float;$/;"	m	struct:__anon9
 value_int	lib/clExtensions.h	/^	cl_int              value_int;$/;"	m	struct:__anon9
+vecadd_LDADD	src/vecadd/Makefile	/^vecadd_LDADD = $(LDADD)$/;"	m
+vecadd_LDFLAGS	src/vecadd/Makefile	/^vecadd_LDFLAGS = $(CLWORKPOOL) -lOpenCL$/;"	m
+vecadd_LINK	src/vecadd/Makefile	/^vecadd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \\$/;"	m
+vecadd_OBJECTS	src/vecadd/Makefile	/^vecadd_OBJECTS = $(am_vecadd_OBJECTS)$/;"	m
+vecadd_SOURCES	src/vecadd/Makefile	/^vecadd_SOURCES = \\$/;"	m
 wait_list	lib/clExtensions.h	/^	cl_int* wait_list;$/;"	m	struct:__anon2
 work_dim	lib/clExtensions.h	/^	cl_uint work_dim;$/;"	m	class:work_unit
 work_dim	lib/clExtensions.h	/^	cl_uint work_dim;$/;"	m	struct:__anon1

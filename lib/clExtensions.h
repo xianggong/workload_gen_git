@@ -19,9 +19,9 @@ typedef double cl_time;
 
 
 // Init extension function pointers
-#define INIT_CL_EXT_FCN_PTR(name) \
+#define INIT_CL_EXT_FCN_PTR(platform, name) \
 if(!pfn_##name) { \
-	pfn_##name = (name##_fn) clGetExtensionFunctionAddress(#name); \
+	pfn_##name = (name##_fn) clGetExtensionFunctionAddressForPlatform(platform, #name); \
 	if(!pfn_##name) { \
 		printf("Cannot get pointer to ext. fcn.\n "); \
 		exit(1); \
@@ -236,7 +236,11 @@ public:
 	  void (*pfn_finalize_callback)(void* finalize_args);
 	  void* finalize_args;
 	  */
-	};
+private:
+
+	char* load_source(const char* file_name, int *file_size);
+
+};
 
 
 

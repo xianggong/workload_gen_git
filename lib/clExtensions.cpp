@@ -223,6 +223,44 @@ void work_unit::init(work_pool *work_pool,
 	set_status(status, CL_SUCCESS);
 }
 
+char* work_unit::load_source(const char* file_name, int *file_size)
+{
+	FILE* input ;
+	long size;
+	char *content;
+
+#ifdef _WIN32
+	fopen_s(&input, file_name, "rb");
+#else
+	input = fopen(file_name, "rb");
+#endif
+	if(input == NULL) 
+		return NULL;
+
+	if(fseek(input, 0, SEEK_END) == -1) 
+		return NULL;
+	
+	size = ftell(input);
+	if(size == -1) 
+		return NULL;
+	if(fseek(input, 0, SEEK_SET) == -1) 
+		return NULL;
+
+	content = (char*) calloc(1, (size_t) size +1); 
+	if(content == NULL) 
+		return NULL;
+
+	fread(content, 1, (size_t)size, input);
+	if(ferror(input)) {
+		free(content);
+		return NULL;
+	}
+
+	fclose(input);
+	content[size] = '\0';
+	*file_size = size;
+	return content;
+}
 //! Work unit compiling function
 /*!
 Compile the kernels for specific context
@@ -237,99 +275,67 @@ cl_program work_unit::compile_program(_work_pool_context context, char * program
 	cl_int status;          
 	FILE *fp;
 	char *source;
-	long int size;
+	int size;
 
 	printf("Pre Compiling Function: Kernel file is: %s, device is: %s\n", program_path, context.device_name);
 
-#ifdef _WIN32
-	fopen_s(&fp, program_path, "rb");
-#else
-	fp = fopen(program_path, "rb");
-#endif
-	if(!fp) {
-		printf("Could not open kernel file\n");
-		exit(-1);
-	}
-	status = fseek(fp, 0, SEEK_END);
-	if(status != 0) {
-		printf("Error seeking to end of file\n");
-		exit(-1);
-	}
-	size = ftell(fp);
-	printf("size:**********************%lu\n",size);
-	if(size < 0) {
-		printf("Error getting file position\n");
-		exit(-1);
-	}
-	
-	rewind(fp);
+	source = this->load_source(program_path, &size);
 
-	source = (char *)malloc(size + 1);
-	// fill with NULLs
-	for (int i=0;i<size+1;i++) source[i]='\0';
-		if(source == NULL) {
-			printf("Error allocating space for the kernel source\n");
-			exit(-1);
-		}
-
-	//fread(source, size, 1, fp);   // TODO add error checking here
-		fread(source,1,size,fp);
-		source[size] = '\0';
 	//printf("source:%s",source);
-		cl_program clProgramReturn = clCreateProgramWithSource(context.context, 1, 
-			(const char **)&source, NULL, &status);
-		if(cl_errChk(status, "creating program", true)) {
-			exit(1);
-		}
+	cl_program clProgramReturn = clCreateProgramWithSource(context.context, 1, 
+		(const char **)&source, NULL, &status);
+	if(cl_errChk(status, "creating program", true)) {
+		exit(1);
+	}
 
-		free(source);
-		fclose(fp);
+	free(source);
+	fclose(fp);
 
-		status = clBuildProgram(clProgramReturn, 0, NULL,compileoptions, NULL, NULL);
-		if(cl_errChk(status, "building program", true) || verbosebuild == 1) 
-		{
+	status = clBuildProgram(clProgramReturn, 0, NULL,compileoptions, NULL, NULL);
+	if(cl_errChk(status, "building program", true) || verbosebuild == 1) 
+	{
 
-			cl_build_status build_status;
+		cl_build_status build_status;
 
-			clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_STATUS, 
-				sizeof(cl_build_status), &build_status, NULL);
+		clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_STATUS, 
+			sizeof(cl_build_status), &build_status, NULL);
 
-			if(build_status == CL_SUCCESS && verbosebuild == 0) {
-				return clProgramReturn;      
-			}	
+		if(build_status == CL_SUCCESS && verbosebuild == 0) {
+			return clProgramReturn;      
+		}	
 
 		//char *build_log;
-			size_t ret_val_size;
-			printf("Device: %p",context.device);
-			clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 0, 
-				NULL, &ret_val_size);
+		size_t ret_val_size;
+		printf("Device: %p",context.device);
+		clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 0, 
+			NULL, &ret_val_size);
 
-			char *build_log = (char *) malloc(ret_val_size+1);
-			if(build_log == NULL){ printf("Couldnt Allocate Build Log of Size %d \n",ret_val_size); exit(1);}
+		char *build_log = (char *) malloc(ret_val_size+1);
+		if(build_log == NULL){ printf("Couldnt Allocate Build Log of Size %d \n",ret_val_size); exit(1);}
 
-			clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 
-				ret_val_size+1, build_log, NULL);
+		clGetProgramBuildInfo(clProgramReturn, context.device, CL_PROGRAM_BUILD_LOG, 
+			ret_val_size+1, build_log, NULL);
 
-			printf("After build log call\n");
+		printf("After build log call\n");
 		// to be careful, terminate with \0
 		// there's no information in the reference whether the string is 0 
 		// terminated or not
-			build_log[ret_val_size] = '\0';
+		build_log[ret_val_size] = '\0';
 
-			printf("Build log:\n %s...\n", build_log);
-			getchar();
-			if(build_status != CL_SUCCESS) {
-				exit(1);
-			}	
-			else
-				return clProgramReturn;	  
-		}
+		printf("Build log:\n %s...\n", build_log);
+		getchar();
+		if(build_status != CL_SUCCESS) {
+			exit(1);
+		}	
+		else
+			return clProgramReturn;	  
+	}
 
 	// print the ptx information
 	//   cl_printBinaries(clProgram);
 	//    printf("Done Compiling the Program\n");
-		return clProgramReturn;
-	}
+	return clProgramReturn;
+}
 
 //! Work unit kernel creation function
 /*!
@@ -1010,7 +1016,7 @@ work_pool_context work_pool::work_pool_get_contexts()
 					};
 
 					// Initialize clCreateSubDevicesEXT function pointer
-					INIT_CL_EXT_FCN_PTR(clCreateSubDevicesEXT);
+					INIT_CL_EXT_FCN_PTR(this->context[device_idx].platform, clCreateSubDevicesEXT);
 
 					cl_uint numSubDevices = 0;
 					// Get number of sub-devices
