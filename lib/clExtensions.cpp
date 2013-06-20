@@ -1803,7 +1803,7 @@ cl_mem work_pool::request_buffer(_work_pool_context context_requested, void *dat
     //printf("Buffer management(new) time for this frame: %f\n", cl_computeTime(begin_time, end_time));
 		return entry->buffer[entry->valid_idx];
 
-}
+	}
 
 //! Query the information of the next work unit
 /*!
@@ -1909,4 +1909,4 @@ void work_pool::finish()
 			}
 		}
 #endif	
-}
+	}
